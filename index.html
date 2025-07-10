@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-500">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAGUPATHI C | AI & Data Science Engineer</title>
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .dark body { background-color: #1a202c; color: #f7fafc; }
+    .dark header, .dark footer { background-color: #2d3748; color: #f7fafc; }
+    .dark nav { background-color: #4a5568; }
+    .dark section { background-color: #2d3748; color: #f7fafc; }
+    .animate-slide-up { animation: slideUp 0.6s ease-in-out; }
+    @keyframes slideUp {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    });
+
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+
+    function openResumePopup() {
+      window.open('RagupathiC_Resume2025.pdf', '_blank', 'width=900,height=1100');
+    }
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white">
+
+  <header class="bg-blue-900 text-white py-12 text-center">
+    <img src="images.jpg" alt="Ragupathi C" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white shadow-lg transform transition-transform hover:scale-105">
+    <h1 class="text-4xl font-bold">Ragupathi C</h1>
+    <p class="text-lg mt-2">AI & Data Science | Cloud | Full Stack Developer</p>
+    <div class="mt-4 space-x-4">
+      <button onclick="toggleDarkMode()" class="px-4 py-2 bg-white text-blue-900 rounded shadow hover:bg-gray-100">Toggle Dark Mode</button>
+      <button onclick="openResumePopup()" class="px-4 py-2 bg-green-500 text-white rounded shadow hover:bg-green-600">View Resume</button>
+      <a href="https://www.linkedin.com/in/ragupathi-c-033056288/" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700">LinkedIn Profile</a>
+    </div>
+  </header>
+
+  <!-- The rest of the content remains unchanged -->
+
+
+  <nav class="bg-white shadow sticky top-0 z-50 py-3 dark:bg-gray-800">
+    <div class="flex justify-center space-x-6 font-semibold text-blue-800 dark:text-white">
+      <a href="#projects" class="hover:text-blue-500">Projects</a>
+      <a href="#education" class="hover:text-blue-500">Education</a>
+      <a href="#internships" class="hover:text-blue-500">Internships</a>
+      <a href="#certificates" class="hover:text-blue-500">Certificates</a>
+      <a href="#skills" class="hover:text-blue-500">Skills</a>
+      <a href="#contact" class="hover:text-blue-500">Contact</a>
+    </div>
+  </nav>
+
+  <section id="about" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
+  <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">About Me</h2>
+  <p class="text-lg text-gray-800 dark:text-gray-100 leading-relaxed">
+    🚀 <strong>Passionate Data Analyst | AI & Data Science Enthusiast</strong>
+  </p>
+  <p class="mt-4 text-lg leading-relaxed text-gray-700 dark:text-gray-200">
+    I am <strong>Ragupathi C</strong>, an aspiring Data Analyst with a background in Artificial Intelligence and Data Science from <strong>Paavai College of Engineering</strong>. I have a strong passion for learning new technologies, staying updated with the latest advancements in data science, and leveraging data to drive meaningful insights.
+  </p>
+  <p class="mt-4 text-lg leading-relaxed text-gray-700 dark:text-gray-200">
+    I am committed to lifelong learning and continuously enhancing my skills in <strong>SQL, Python, Power BI</strong>, and data-driven decision-making. My short-term goal is to secure a Data Analyst role in a leading MNC, where I can apply my analytical skills to solve real-world business challenges.
+  </p>
+  <p class="mt-4 text-lg leading-relaxed text-gray-700 dark:text-gray-200">
+    In the long run, I aspire to build a startup and scale it into a Unicorn company, utilizing data and AI-driven solutions to create an impact.
+  </p>
+  <p class="mt-4 text-lg text-green-700 dark:text-green-300">
+    🔹 <strong>Key Strength:</strong><br>
+    ✔ Self-motivation & Adaptability – Thriving in challenges, learning independently, and continuously growing.
+  </p>
+  <p class="mt-4 text-lg text-blue-700 dark:text-blue-300">
+    I am always open to <strong>networking, collaboration, and new opportunities</strong> in data analytics and AI.
+  </p>
+</section>
+
+
+  <main class="max-w-5xl mx-auto px-4">
+    <section id="projects" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
+      <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">Projects</h2>
+      <div class="transition-transform transform hover:scale-[1.02] hover:shadow-md p-2">
+        <h3 class="text-xl font-semibold">The Climate Crusader</h3>
+        <p>AI-powered weather and climate prediction platform. Roles: Data Analyst & Full Stack Developer.</p>
+      </div>
+      <div class="mt-4 transition-transform transform hover:scale-[1.02] hover:shadow-md p-2">
+        <h3 class="text-xl font-semibold">Voice-Controlled AI Assistant</h3>
+        <p>Built using JavaScript and OpenAI API. Real-time voice interaction with GPT-based responses.</p>
+      </div>
+    </section>
+
+    <section id="education" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
+      <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">Education</h2>
+      <ul class="space-y-2">
+        <li><strong>B.Tech, Paavai College of Engineering</strong> – CGPA: 7.45</li>
+        <li><strong>HSC (2022):</strong> 53.67%</li>
+        <li><strong>SSLC (2020):</strong> 65%</li>
+      </ul>
+    </section>
+
+    <section id="internships" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
+      <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">Internships / Workshops</h2>
+      <ul class="space-y-2">
+        <li><strong>AWS Academy</strong> – Cloud Virtual Internship (Jan–Mar 2024)</li>
+        <li><strong>Google for Developers</strong> – AI/ML Virtual Internship (Apr–Jun 2024)</li>
+        <li><strong>IIT Madras Workshop</strong> – Data Science (Mar 2025)</li>
+      </ul>
+    </section>
+
+    <section id="certificates" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
+      <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">Certificates & Online Internships</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>AWS Academy Cloud Virtual Internship</strong> – Jan–Mar 2024 <a href="AWS_Internship.pdf" target="_blank" class="text-blue-400 underline">[View]</a></li>
+        <li><strong>Google for Developers AI-ML Internship</strong> – Apr–Jun 2024 <a href="Google_ML_Internship.pdf" target="_blank" class="text-blue-400 underline">[View]</a></li>
+        <li><strong>IIT Madras – Data Science Workshop (Top Engineers India)</strong> – Mar 2025 <a href="IIT_DS_Workshop.pdf" target="_blank" class="text-blue-400 underline">[View]</a></li>
+        <li><strong>Google Data Analytics Professional Certificate</strong> – May 2025 <a href="Google_Data_Analytics.pdf" target="_blank" class="text-blue-400 underline">[View]</a></li>
+        <li><strong>National Level Workshop on IOS App Development</strong> – March 2024  <a href="IOS_App_Workshop.pdf" target="_blank" class="text-blue-400 underline ml-2">[View]</a>
+</li>
+
+    </ul>
+    </section>
+
+    <section id="skills" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
+      <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm dark:bg-blue-900 dark:text-white">Python</span>
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm dark:bg-blue-900 dark:text-white">Java</span>
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm dark:bg-blue-900 dark:text-white">Excel</span>
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm dark:bg-blue-900 dark:text-white">SQL</span>
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm dark:bg-blue-900 dark:text-white">Power BI</span>
+      </div>
+      <h3 class="text-xl font-semibold mt-6">Soft Skills</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-2">
+        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm dark:bg-green-900 dark:text-white">Observation</span>
+        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm dark:bg-green-900 dark:text-white">Decision Making</span>
+        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm dark:bg-green-900 dark:text-white">Communication</span>
+        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm dark:bg-green-900 dark:text-white">Multi-tasking</span>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
+      <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">Contact</h2>
+      <ul class="space-y-2">
+        <li>📧 ragupathic2005@gmail.com</li>
+        <li>📍 Veppanapalli, Krishnagiri</li>
+        <li>📞 +91 8610750690</li>
+        <li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/ragupathi-c-033056288/" target="_blank" class="underline text-blue-400">linkedin.com/in/ragupathi-c</a></li>
+      </ul>
+      <a href="mailto:ragupathic2005@gmail.com" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Email Me</a>
+    </section>
+  </main>
+
+  <footer class="bg-blue-900 text-white text-center py-4 mt-10 dark:bg-gray-800">
+    &copy; 2025 Ragupathi C. All rights reserved.
+  </footer>
+
+</body>
+</html>
