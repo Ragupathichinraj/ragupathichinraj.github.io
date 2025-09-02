@@ -105,12 +105,31 @@
 </section>
 </main>
 
-  <main class="max-w-5xl mx-auto px-4">
+ <main class="max-w-5xl mx-auto px-4">
   <section id="education" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
     <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">🎓 Education</h2>
 
+    <style>
+      .edu-card {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-in-out;
+      }
+      .edu-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .edu-card:hover {
+        transform: scale(1.03) rotate3d(1, 1, 0, 3deg);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      }
+      .edu-card:active {
+        transform: scale(0.97) rotate(0deg); /* tap bounce effect */
+      }
+    </style>
+
     <!-- B.Tech Degree -->
-    <div class="flex items-start space-x-4 transition-transform transform hover:scale-[1.02] hover:shadow-md p-4 rounded-md bg-gray-50 dark:bg-gray-700">
+    <div class="edu-card flex items-start space-x-4 transition-transform transform p-4 rounded-md bg-gray-50 dark:bg-gray-700">
       <img src="https://img.icons8.com/fluency/48/000000/graduation-cap.png" alt="Graduation Icon" class="w-10 h-10 mt-1">
       <div>
         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
@@ -127,7 +146,7 @@
     </div>
 
     <!-- HSC -->
-    <div class="flex items-start space-x-4 mt-4 transition-transform transform hover:scale-[1.02] hover:shadow-md p-4 rounded-md bg-gray-50 dark:bg-gray-700">
+    <div class="edu-card flex items-start space-x-4 mt-4 transition-transform transform p-4 rounded-md bg-gray-50 dark:bg-gray-700">
       <img src="https://img.icons8.com/fluency/48/000000/school.png" alt="HSC Icon" class="w-10 h-10 mt-1">
       <div>
         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
@@ -140,7 +159,7 @@
     </div>
 
     <!-- SSLC -->
-    <div class="flex items-start space-x-4 mt-4 transition-transform transform hover:scale-[1.02] hover:shadow-md p-4 rounded-md bg-gray-50 dark:bg-gray-700">
+    <div class="edu-card flex items-start space-x-4 mt-4 transition-transform transform p-4 rounded-md bg-gray-50 dark:bg-gray-700">
       <img src="https://img.icons8.com/fluency/48/000000/school.png" alt="SSLC Icon" class="w-10 h-10 mt-1">
       <div>
         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
@@ -154,14 +173,51 @@
   </section>
 </main>
 
- <main class="max-w-5xl mx-auto px-4">
+<script>
+  // Scroll Animation for Education Cards
+  const eduCards = document.querySelectorAll('.edu-card');
+  const eduObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  eduCards.forEach(card => {
+    eduObserver.observe(card);
+  });
+</script>
+
+
+<main class="max-w-5xl mx-auto px-4">
   <section id="projects" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
     <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">
       🚀 Projects
     </h2>
 
+    <!-- Card Style -->
+    <style>
+      .project-card {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-in-out;
+      }
+      .project-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .project-card:hover {
+        transform: scale(1.05) rotate3d(1, 1, 0, 5deg);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+      }
+      .project-card:active {
+        transform: scale(0.97) rotate(0deg); /* tap bounce */
+      }
+    </style>
+
     <!-- Project: The Climate Crusader -->
-    <div class="flex items-start space-x-4 transition-transform transform hover:scale-[1.02] hover:shadow-md p-4 rounded-md bg-gray-50 dark:bg-gray-700 mb-4">
+    <div class="project-card flex items-start space-x-4 p-4 rounded-md bg-gray-50 dark:bg-gray-700 mb-4">
       <img src="https://img.icons8.com/color/48/partly-cloudy-day--v1.png" alt="Weather Icon" class="w-10 h-10 mt-1">
       <div>
         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">The Climate Crusader</h3>
@@ -172,7 +228,7 @@
     </div>
 
     <!-- Project: Voice-Controlled AI Assistant -->
-    <div class="flex items-start space-x-4 transition-transform transform hover:scale-[1.02] hover:shadow-md p-4 rounded-md bg-gray-50 dark:bg-gray-700 mb-4">
+    <div class="project-card flex items-start space-x-4 p-4 rounded-md bg-gray-50 dark:bg-gray-700 mb-4">
       <img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="AI Assistant Icon" class="w-10 h-10 mt-1">
       <div>
         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Voice-Controlled AI Assistant</h3>
@@ -184,7 +240,7 @@
     </div>
 
     <!-- Project: Travel Planner and Weather Info -->
-    <div class="flex items-start space-x-4 transition-transform transform hover:scale-[1.02] hover:shadow-md p-4 rounded-md bg-gray-50 dark:bg-gray-700">
+    <div class="project-card flex items-start space-x-4 p-4 rounded-md bg-gray-50 dark:bg-gray-700 mb-4">
       <img src="https://img.icons8.com/fluency/48/worldwide-location.png" alt="Travel Icon" class="w-10 h-10 mt-1">
       <div>
         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Travel Planner & Weather Information</h3>
@@ -195,19 +251,67 @@
       </div>
     </div>
 
+    <!-- Project: Decentralized Voting System -->
+    <div class="project-card flex items-start space-x-4 p-4 rounded-md bg-gray-50 dark:bg-gray-700">
+      <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/48/external-blockchain-cryptocurrency-flatart-icons-outline-flatarticons.png" alt="Blockchain Icon" class="w-10 h-10 mt-1">
+      <div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Decentralized Voting System</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          Blockchain-powered secure and transparent voting platform ensuring immutability and trust.<br />
+        </p>
+      </div>
+    </div>
+
   </section>
 </main>
 
-   <main class="max-w-5xl mx-auto px-4">
+<script>
+  // Scroll Animation
+  const cards = document.querySelectorAll('.project-card');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => {
+    observer.observe(card);
+  });
+</script>
+
+
+
+  <main class="max-w-5xl mx-auto px-4">
   <section id="internships" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
     <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">
       💼 Internships / Workshops
     </h2>
 
+    <style>
+      .internship-card {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-in-out;
+      }
+      .internship-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .internship-card:hover {
+        transform: scale(1.05) rotate3d(1, 1, 0, 5deg);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+      }
+      .internship-card:active {
+        transform: scale(0.97) rotate(0deg); /* tap bounce */
+      }
+    </style>
+
     <div class="space-y-6 text-gray-800 dark:text-gray-300">
       
       <!-- AWS Internship -->
-      <div class="flex items-start space-x-4 mt-4 transition-transform transform hover:scale-[1.02] hover:shadow-md p-4 rounded-md bg-gray-50 dark:bg-gray-700">
+      <div class="internship-card flex items-start space-x-4 mt-4 p-4 rounded-md bg-gray-50 dark:bg-gray-700">
         <img src="https://img.icons8.com/color/48/000000/amazon-web-services.png" alt="AWS Icon" class="w-10 h-10 mt-1">
         <div>
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white">AWS Academy</h3>
@@ -216,7 +320,7 @@
       </div>
 
       <!-- Google Internship -->
-      <div class="flex items-start space-x-4 mt-4 transition-transform transform hover:scale-[1.02] hover:shadow-md p-4 rounded-md bg-gray-50 dark:bg-gray-700">
+      <div class="internship-card flex items-start space-x-4 mt-4 p-4 rounded-md bg-gray-50 dark:bg-gray-700">
         <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Icon" class="w-10 h-10 mt-1">
         <div>
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Google for Developers</h3>
@@ -225,7 +329,7 @@
       </div>
 
       <!-- IIT Madras Workshop -->
-      <div class="flex items-start space-x-4 mt-4 transition-transform transform hover:scale-[1.02] hover:shadow-md p-4 rounded-md bg-gray-50 dark:bg-gray-700">
+      <div class="internship-card flex items-start space-x-4 mt-4 p-4 rounded-md bg-gray-50 dark:bg-gray-700">
         <img src="https://img.icons8.com/fluency/48/classroom.png" alt="Workshop Icon" class="w-10 h-10 mt-1">
         <div>
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white">IIT Madras Workshop</h3>
@@ -237,6 +341,23 @@
   </section>
 </main>
 
+<script>
+  // Scroll Animation for Internship Cards
+  const internshipCards = document.querySelectorAll('.internship-card');
+  const internshipObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  internshipCards.forEach(card => {
+    internshipObserver.observe(card);
+  });
+</script>
+
+
 <main class="max-w-5xl mx-auto px-4">
     <section id="certificates" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
       <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">Certificates & Online Internships</h2>
@@ -245,117 +366,151 @@
          <li><strong>National Level Workshop on IOS App Development</strong> – March 2024  <a href="IOS_App_Workshop.pdf" target="_blank" class="text-blue-400 underline ml-2">[View]</a>
         <li><strong>Google for Developers AI-ML Internship</strong> – Apr–Jun 2024 <a href="Google_ML_Internship.pdf" target="_blank" class="text-blue-400 underline">[View]</a></li>
         <li><strong>IIT Madras – Data Science Workshop (Top Engineers India)</strong> – Mar 2025 <a href="IIT_DS_Workshop.pdf" target="_blank" class="text-blue-400 underline">[View]</a></li>
-        <li><strong>Google Data Analytics Professional Certificate</strong> – May 2025 <a href="Google_Data_Analytics.pdf" target="_blank" class="text-blue-400 underline">[View]</a></li>
-       
+        <li><strong>Google Data Analytics Professional Certificate</strong> – May 2025 <a href="Google_Data_Analytics.pdf" target="_blank" class="text-blue-400 underline">[View]</a></li> 
 </li>
-
     </ul>
     </section>
     </main>
+
 <main class="max-w-5xl mx-auto px-4">
-    <section id="skills" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
-  <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">💻 Skills</h2>
-  
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg text-gray-700 dark:text-gray-200">
-    
-    <!-- Programming Languages -->
-    <div class="bg-white shadow-md rounded-md p-6">
-      <h3 class="text-xl font-semibold">Programming Languages</h3>
-      <ul class="flex flex-col space-y-2 mt-4">
-        <li class="flex items-center space-x-2">
-          <img src="https://img.icons8.com/fluency/48/000000/python.png" alt="Python" class="w-8 h-8" />
-          <span class="text-gray-700">Python</span>
-        </li>
-        <li class="flex items-center space-x-2">
-          <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java" class="w-8 h-8" />
-          <span class="text-gray-700">Java</span>
-        </li>
-      </ul>
+  <section id="skills" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
+    <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">💻 Skills</h2>
+
+    <style>
+      .skill-card {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-in-out;
+      }
+      .skill-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .skill-card:hover {
+        transform: scale(1.05) rotate3d(1, 1, 0, 5deg);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+      }
+      .skill-card:active {
+        transform: scale(0.97) rotate(0deg); /* tap bounce */
+      }
+    </style>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg text-gray-700 dark:text-gray-200">
+      
+      <!-- Programming Languages -->
+      <div class="skill-card bg-white shadow-md rounded-md p-6">
+        <h3 class="text-xl font-semibold">Programming Languages</h3>
+        <ul class="flex flex-col space-y-2 mt-4">
+          <li class="flex items-center space-x-2">
+            <img src="https://img.icons8.com/fluency/48/000000/python.png" alt="Python" class="w-8 h-8" />
+            <span class="text-gray-700">Python</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java" class="w-8 h-8" />
+            <span class="text-gray-700">Java</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Database -->
+      <div class="skill-card bg-white shadow-md rounded-md p-6">
+        <h3 class="text-xl font-semibold">Database</h3>
+        <ul class="flex flex-col space-y-2 mt-4">
+          <li class="flex items-center space-x-2">
+            <img src="https://img.icons8.com/fluency/48/000000/mysql-logo.png" alt="MySQL" class="w-8 h-8" />
+            <span class="text-gray-700">MySQL</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Web Technologies -->
+      <div class="skill-card bg-white shadow-md rounded-md p-6 dark:bg-gray-800">
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Web Technologies</h3>
+        <ul class="flex flex-col space-y-2 mt-4">
+          <li class="flex items-center space-x-2">
+            <img src="https://img.icons8.com/color/48/000000/html-5--v1.png" alt="HTML" class="w-8 h-8" />
+            <span class="text-gray-700 dark:text-gray-200">HTML</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS" class="w-8 h-8" />
+            <span class="text-gray-700 dark:text-gray-200">CSS</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <img src="https://img.icons8.com/color/48/000000/javascript--v1.png" alt="JavaScript" class="w-8 h-8" />
+            <span class="text-gray-700 dark:text-gray-200">JavaScript</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Data Visualization -->
+      <div class="skill-card bg-white shadow-md rounded-md p-6">
+        <h3 class="text-xl font-semibold">Data Visualization Tools</h3>
+        <ul class="flex flex-col space-y-2 mt-4">
+          <li class="flex items-center space-x-2">
+            <img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="Power BI" class="w-8 h-8" />
+            <span class="text-gray-700">Power BI</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" alt="Excel" class="w-8 h-8" />
+            <span class="text-gray-700">MS Excel</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Version Control -->
+      <div class="skill-card bg-white shadow-md rounded-md p-6">
+        <h3 class="text-xl font-semibold">Version Control</h3>
+        <ul class="flex flex-col space-y-2 mt-4">
+          <li class="flex items-center space-x-2">
+            <img src="https://img.icons8.com/fluency/48/000000/github.png" alt="GitHub" class="w-8 h-8" />
+            <span class="text-gray-700">GitHub</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="skill-card bg-white shadow-md rounded-md p-6">
+        <h3 class="text-xl font-semibold">Soft Skills</h3>
+        <ul class="flex flex-col space-y-2 mt-4">
+          <li class="flex items-center space-x-2">
+            <img src="https://img.icons8.com/fluency/24/visible.png" alt="Observation" class="w-6 h-6" />
+            <span class="text-gray-700">Observation</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <img src="https://img.icons8.com/fluency/24/decision.png" alt="Decision Making" class="w-6 h-6" />
+            <span class="text-gray-700">Decision Making</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <img src="https://img.icons8.com/fluency/24/speech-bubble.png" alt="Communication" class="w-6 h-6" />
+            <span class="text-gray-700">Communication</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <img src="https://img.icons8.com/fluency/24/multiple-devices.png" alt="Multi-tasking" class="w-6 h-6" />
+            <span class="text-gray-700">Multi-tasking</span>
+          </li>
+        </ul>
+      </div>
+
     </div>
-
-    <!-- Database -->
-    <div class="bg-white shadow-md rounded-md p-6">
-      <h3 class="text-xl font-semibold">Database</h3>
-      <ul class="flex flex-col space-y-2 mt-4">
-        <li class="flex items-center space-x-2">
-          <img src="https://img.icons8.com/fluency/48/000000/mysql-logo.png" alt="MySQL" class="w-8 h-8" />
-          <span class="text-gray-700">MySQL</span>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Web Technologies -->
-<div class="bg-white shadow-md rounded-md p-6 dark:bg-gray-800">
-  <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Web Technologies</h3>
-  <ul class="flex flex-col space-y-2 mt-4">
-    <li class="flex items-center space-x-2">
-      <img src="https://img.icons8.com/color/48/000000/html-5--v1.png" alt="HTML" class="w-8 h-8" />
-      <span class="text-gray-700 dark:text-gray-200">HTML</span>
-    </li>
-    <li class="flex items-center space-x-2">
-      <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS" class="w-8 h-8" />
-      <span class="text-gray-700 dark:text-gray-200">CSS</span>
-    </li>
-    <li class="flex items-center space-x-2">
-      <img src="https://img.icons8.com/color/48/000000/javascript--v1.png" alt="JavaScript" class="w-8 h-8" />
-      <span class="text-gray-700 dark:text-gray-200">JavaScript</span>
-    </li>
-  </ul>
-</div>
-
-
-    <!-- Data Visualization -->
-    <div class="bg-white shadow-md rounded-md p-6">
-      <h3 class="text-xl font-semibold">Data Visualization Tools</h3>
-      <ul class="flex flex-col space-y-2 mt-4">
-        <li class="flex items-center space-x-2">
-          <img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="Power BI" class="w-8 h-8" />
-          <span class="text-gray-700">Power BI</span>
-        </li>
-        <li class="flex items-center space-x-2">
-          <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" alt="Excel" class="w-8 h-8" />
-          <span class="text-gray-700">MS Excel</span>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Version Control -->
-    <div class="bg-white shadow-md rounded-md p-6">
-      <h3 class="text-xl font-semibold">Version Control</h3>
-      <ul class="flex flex-col space-y-2 mt-4">
-        <li class="flex items-center space-x-2">
-          <img src="https://img.icons8.com/fluency/48/000000/github.png" alt="GitHub" class="w-8 h-8" />
-          <span class="text-gray-700">GitHub</span>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Soft Skills -->
-    <div class="bg-white shadow-md rounded-md p-6">
-      <h3 class="text-xl font-semibold">Soft Skills</h3>
-      <ul class="flex flex-col space-y-2 mt-4">
-        <li class="flex items-center space-x-2">
-          <img src="https://img.icons8.com/fluency/24/visible.png" alt="Observation" class="w-6 h-6" />
-          <span class="text-gray-700">Observation</span>
-        </li>
-        <li class="flex items-center space-x-2">
-          <img src="https://img.icons8.com/fluency/24/decision.png" alt="Decision Making" class="w-6 h-6" />
-          <span class="text-gray-700">Decision Making</span>
-        </li>
-        <li class="flex items-center space-x-2">
-          <img src="https://img.icons8.com/fluency/24/speech-bubble.png" alt="Communication" class="w-6 h-6" />
-          <span class="text-gray-700">Communication</span>
-        </li>
-        <li class="flex items-center space-x-2">
-          <img src="https://img.icons8.com/fluency/24/multiple-devices.png" alt="Multi-tasking" class="w-6 h-6" />
-          <span class="text-gray-700">Multi-tasking</span>
-        </li>
-      </ul>
-    </div>
-
-  </div>
-</section>
+  </section>
 </main>
+
+<script>
+  // Scroll Animation for Skills Cards
+  const skillCards = document.querySelectorAll('.skill-card');
+  const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  skillCards.forEach(card => {
+    skillObserver.observe(card);
+  });
+</script>
+
 
  <main class="max-w-5xl mx-auto px-4">
   <section id="languages" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
@@ -404,9 +559,6 @@
     </a>
   </div>
 </footer>
-
-
-
 
 </body>
 </html>
