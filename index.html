@@ -1,563 +1,588 @@
 <!DOCTYPE html>
-<html lang="en" class="transition-colors duration-500">
+<html lang="en" class="scroll-smooth scroll-pt-24">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RAGUPATHI C | AI & Data Science Engineer</title>
-  <link rel="icon" href="favicon.ico" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-  <style>
-    html { scroll-behavior: smooth; }
-    .dark body { background-color: #1a202c; color: #f7fafc; }
-    .dark header, .dark footer { background-color: #2d3748; color: #f7fafc; }
-    .dark nav { background-color: #4a5568; }
-    .dark section { background-color: #2d3748; color: #f7fafc; }
-    .animate-slide-up { animation: slideUp 0.6s ease-in-out; }
-    @keyframes slideUp {
-      0% { transform: translateY(30px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-  </style>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const theme = localStorage.getItem('theme');
-      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      }
-    });
-
-    function toggleDarkMode() {
-      document.documentElement.classList.toggle('dark');
-      const isDark = document.documentElement.classList.contains('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    }
-
-    function openResumePopup() {
-      window.open('RagupathiC_Resume2025.pdf', '_blank', 'width=900,height=1100');
-    }
-  </script>
-<header class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-10 text-center shadow-lg">
-  <img src="images.jpg" alt="Ragupathi C" 
-       class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white shadow-lg transform transition-transform duration-300 hover:scale-105">
-  
-  <h1 class="text-4xl font-bold">Ragupathi C</h1>
-  <p class="text-lg mt-2">AI & Data Science | Cloud | Full Stack Developer</p>
-  
-  <div class="mt-6 flex flex-wrap justify-center gap-4 px-4">
-    <button onclick="toggleDarkMode()" 
-            class="px-5 py-2 bg-white text-blue-900 font-medium rounded shadow hover:bg-gray-200 transition">
-      Toggle Dark Mode
-    </button>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ragupathi C | AI & Data Science Engineer</title>
     
-    <button onclick="openResumePopup()" 
-            class="px-5 py-2 bg-purple-600 text-white font-medium rounded shadow hover:bg-purple-700 transition">
-      View Resume
-    </button>
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    <a href="https://www.linkedin.com/in/ragupathi-c-033056288/" target="_blank" 
-       class="px-5 py-2 bg-blue-700 text-white font-medium rounded shadow hover:bg-blue-800 transition">
-      LinkedIn Profile
-    </a>
-  </div>
-</header>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
 
-
-
-
-  <!-- The rest of the content remains unchanged -->
-
-
-  <nav class="bg-white shadow sticky top-0 z-50 py-3 dark:bg-gray-800">
-    <div class="flex justify-center space-x-6 font-semibold text-blue-800 dark:text-white">
-      <a href="#education" class="hover:text-blue-500">Education</a>
-      <a href="#projects" class="hover:text-blue-500">Projects</a>
-      <a href="#internships" class="hover:text-blue-500">Internships</a>
-      <a href="#certificates" class="hover:text-blue-500">Certificates</a>
-      <a href="#skills" class="hover:text-blue-500">Skills</a>
-      <a href="#contact" class="hover:text-blue-500">Contact</a>
-    </div>
-  </nav>
-
-<main class="max-w-5xl mx-auto px-4">
-  <section id="about" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
-  <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">About Me</h2>
-  <p class="font-semibold text-lg">
-    🚀 <strong>Passionate Data Analyst | AI & Data Science Enthusiast</strong>
-  </p>
-  <p class="font-semibold text-lg">
-    I am <strong>Ragupathi C</strong>, an aspiring Data Analyst with a background in Artificial Intelligence and Data Science from <strong>Paavai College of Engineering</strong>. I have a strong passion for learning new technologies, staying updated with the latest advancements in data science, and leveraging data to drive meaningful insights.
-  </p>
-  <p class="font-semibold text-lg">
-    I am committed to lifelong learning and continuously enhancing my skills in <strong>SQL, Python, Power BI</strong>, and data-driven decision-making. My short-term goal is to secure a Data Analyst role in a leading MNC, where I can apply my analytical skills to solve real-world business challenges.
-  </p>
-  <p class="font-semibold text-lg">
-    In the long run, I aspire to build a startup and scale it into a Unicorn company, utilizing data and AI-driven solutions to create an impact.
-  </p>
-  <p class="font-semibold text-lg">
-    🔹 <strong>Key Strength:</strong><br>
-    ✔ Self-motivation & Adaptability – Thriving in challenges, learning independently, and continuously growing.
-  </p>
-  <p class="font-semibold text-lg">
-    I am always open to <strong>networking, collaboration, and new opportunities</strong> in data analytics and AI.
-  </p>
-</section>
-</main>
-
- <main class="max-w-5xl mx-auto px-4">
-  <section id="education" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
-    <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">🎓 Education</h2>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                fontFamily: {
+                    sans: ['Outfit', 'sans-serif'],
+                },
+                extend: {
+                    colors: {
+                        honorBlue: '#007AFF', 
+                        honorDark: '#0a0a0a',
+                        honorGray: '#f5f5f7',
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
     <style>
-      .edu-card {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease-in-out;
-      }
-      .edu-card.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      .edu-card:hover {
-        transform: scale(1.03) rotate3d(1, 1, 0, 3deg);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-      }
-      .edu-card:active {
-        transform: scale(0.97) rotate(0deg); /* tap bounce effect */
-      }
+        /* Premium "Honor-like" Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px) scale(0.98);
+            transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+            filter: blur(4px);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            filter: blur(0);
+        }
+
+        /* Glassmorphism for Navbar */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+        }
+        .dark .glass-nav {
+            background: rgba(10, 10, 10, 0.7);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+        .dark ::-webkit-scrollbar-thumb { background: #374151; }
     </style>
+</head>
 
-    <!-- B.Tech Degree -->
-    <div class="edu-card flex items-start space-x-4 transition-transform transform p-4 rounded-md bg-gray-50 dark:bg-gray-700">
-      <img src="https://img.icons8.com/fluency/48/000000/graduation-cap.png" alt="Graduation Icon" class="w-10 h-10 mt-1">
-      <div>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-          B.Tech in Artificial Intelligence and Data Science
-        </h3>
-        <p class="text-gray-700 dark:text-gray-300">
-          Paavai College of Engineering, Namakkal <br />
-          Duration: 2022 – 2026
-        </p>
-        <p class="text-gray-500 dark:text-gray-400">
-          CGPA: 7.45
-        </p>
-      </div>
-    </div>
+<body class="bg-honorGray text-gray-900 dark:bg-honorDark dark:text-gray-100 transition-colors duration-700 antialiased selection:bg-blue-500 selection:text-white">
 
-    <!-- HSC -->
-    <div class="edu-card flex items-start space-x-4 mt-4 transition-transform transform p-4 rounded-md bg-gray-50 dark:bg-gray-700">
-      <img src="https://img.icons8.com/fluency/48/000000/school.png" alt="HSC Icon" class="w-10 h-10 mt-1">
-      <div>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-          Higher Secondary Certificate (HSC)
-        </h3>
-        <p class="text-gray-700 dark:text-gray-300">
-          Year: 2022 &nbsp; | &nbsp; Score: 53.67%
-        </p>
-      </div>
-    </div>
+    <nav class="fixed w-full z-50 top-0 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <a href="#" class="text-xl font-bold tracking-tight z-50 relative">
+                RAGUPATHI C.
+            </a>
+            
+            <div class="hidden md:flex space-x-6 text-sm font-medium tracking-wide text-gray-600 dark:text-gray-400">
+                <a href="#about" class="hover:text-honorBlue hover:scale-105 transition duration-300">About</a>
+                <a href="#education" class="hover:text-honorBlue hover:scale-105 transition duration-300">Education</a>
+                <a href="#skills" class="hover:text-honorBlue hover:scale-105 transition duration-300">Skills</a>
+                <a href="#projects" class="hover:text-honorBlue hover:scale-105 transition duration-300">Projects</a>
+                <a href="#internships" class="hover:text-honorBlue hover:scale-105 transition duration-300">Internships</a>
+                <a href="#languages" class="hover:text-honorBlue hover:scale-105 transition duration-300">Languages</a>
+            </div>
 
-    <!-- SSLC -->
-    <div class="edu-card flex items-start space-x-4 mt-4 transition-transform transform p-4 rounded-md bg-gray-50 dark:bg-gray-700">
-      <img src="https://img.icons8.com/fluency/48/000000/school.png" alt="SSLC Icon" class="w-10 h-10 mt-1">
-      <div>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-          Secondary School Leaving Certificate (SSLC)
-        </h3>
-        <p class="text-gray-700 dark:text-gray-300">
-          Year: 2020 &nbsp; | &nbsp; Score: 65%
-        </p>
-      </div>
-    </div>
-  </section>
-</main>
+            <div class="hidden md:flex items-center gap-4">
+                <button onclick="toggleDarkMode()" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition duration-300">
+                    <i class="fas fa-moon dark:hidden text-gray-600"></i>
+                    <i class="fas fa-sun hidden dark:inline text-yellow-400"></i>
+                </button>
+                <button onclick="openResumePopup()" class="px-6 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-xs font-bold uppercase tracking-widest hover:scale-105 hover:shadow-lg transition transform duration-300">
+                    Resume
+                </button>
+            </div>
 
-<script>
-  // Scroll Animation for Education Cards
-  const eduCards = document.querySelectorAll('.edu-card');
-  const eduObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  eduCards.forEach(card => {
-    eduObserver.observe(card);
-  });
-</script>
-
-
-<main class="max-w-5xl mx-auto px-4">
-  <section id="projects" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
-    <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">
-      🚀 Projects
-    </h2>
-
-    <!-- Card Style -->
-    <style>
-      .project-card {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease-in-out;
-      }
-      .project-card.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      .project-card:hover {
-        transform: scale(1.05) rotate3d(1, 1, 0, 5deg);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-      }
-      .project-card:active {
-        transform: scale(0.97) rotate(0deg); /* tap bounce */
-      }
-    </style>
-
-    <!-- Project: The Climate Crusader -->
-    <div class="project-card flex items-start space-x-4 p-4 rounded-md bg-gray-50 dark:bg-gray-700 mb-4">
-      <img src="https://img.icons8.com/color/48/partly-cloudy-day--v1.png" alt="Weather Icon" class="w-10 h-10 mt-1">
-      <div>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">The Climate Crusader</h3>
-        <p class="text-gray-700 dark:text-gray-300">
-          AI-powered weather and climate prediction platform.<br />
-        </p>
-      </div>
-    </div>
-
-    <!-- Project: Voice-Controlled AI Assistant -->
-    <div class="project-card flex items-start space-x-4 p-4 rounded-md bg-gray-50 dark:bg-gray-700 mb-4">
-      <img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="AI Assistant Icon" class="w-10 h-10 mt-1">
-      <div>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Voice-Controlled AI Assistant</h3>
-        <p class="text-gray-700 dark:text-gray-300">
-          Built using JavaScript and OpenAI API. Real-time voice interaction with GPT-based responses.<br />
-          <a href="https://ragupathichinraj.github.io/nexus-virtual-assistant/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline hover:text-blue-700">🔗 Live Demo</a>
-        </p>
-      </div>
-    </div>
-
-    <!-- Project: Travel Planner and Weather Info -->
-    <div class="project-card flex items-start space-x-4 p-4 rounded-md bg-gray-50 dark:bg-gray-700 mb-4">
-      <img src="https://img.icons8.com/fluency/48/worldwide-location.png" alt="Travel Icon" class="w-10 h-10 mt-1">
-      <div>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Travel Planner & Weather Information</h3>
-        <p class="text-gray-700 dark:text-gray-300">
-          Web app providing destination planning and live weather info using OpenWeatherMap API.<br />
-          <a href="https://ragupathichinraj.github.io/trip-planner/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline hover:text-blue-700">🔗 Live Demo</a>
-        </p>
-      </div>
-    </div>
-
-   <!-- Project: Decentralized Voting System -->
-<div class="project-card flex items-start space-x-4 p-4 rounded-md bg-gray-50 dark:bg-gray-700">
-  <img src="https://img.icons8.com/ios-filled/50/blockchain.png" alt="Blockchain Icon" class="w-10 h-10 mt-1">
-  <div>
-    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Decentralized Voting System</h3>
-    <p class="text-gray-700 dark:text-gray-300">
-      Blockchain-powered secure and transparent voting platform ensuring immutability and trust.<br />
-    </p>
-  </div>
-</div>
-  </section>
-</main>
-
-<script>
-  // Scroll Animation
-  const cards = document.querySelectorAll('.project-card');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  cards.forEach(card => {
-    observer.observe(card);
-  });
-</script>
-
-
-
-  <main class="max-w-5xl mx-auto px-4">
-  <section id="internships" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
-    <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">
-      💼 Internships / Workshops
-    </h2>
-
-    <style>
-      .internship-card {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease-in-out;
-      }
-      .internship-card.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      .internship-card:hover {
-        transform: scale(1.05) rotate3d(1, 1, 0, 5deg);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-      }
-      .internship-card:active {
-        transform: scale(0.97) rotate(0deg); /* tap bounce */
-      }
-    </style>
-
-    <div class="space-y-6 text-gray-800 dark:text-gray-300">
-      
-      <!-- AWS Internship -->
-      <div class="internship-card flex items-start space-x-4 mt-4 p-4 rounded-md bg-gray-50 dark:bg-gray-700">
-        <img src="https://img.icons8.com/color/48/000000/amazon-web-services.png" alt="AWS Icon" class="w-10 h-10 mt-1">
-        <div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">AWS Academy</h3>
-          <p>Cloud Virtual Internship <span class="text-gray-700 dark:text-gray-300">(Jan–Mar 2024)</span></p>
+            <div class="md:hidden z-50 flex items-center gap-4">
+                <button onclick="toggleDarkMode()" class="p-2">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline text-yellow-400"></i>
+                </button>
+                <button id="menu-btn" class="focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
         </div>
-      </div>
 
-      <!-- Google Internship -->
-      <div class="internship-card flex items-start space-x-4 mt-4 p-4 rounded-md bg-gray-50 dark:bg-gray-700">
-        <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Icon" class="w-10 h-10 mt-1">
-        <div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Google for Developers</h3>
-          <p>AI/ML Virtual Internship <span class="text-gray-700 dark:text-gray-300">(Apr–Jun 2024)</span></p>
+        <div id="mobile-menu" class="fixed inset-0 bg-white dark:bg-black z-40 flex-col items-center justify-center space-y-8 text-2xl hidden opacity-0 transition-opacity duration-300">
+            <a href="#about" class="mobile-link hover:text-honorBlue">About</a>
+            <a href="#education" class="mobile-link hover:text-honorBlue">Education</a>
+            <a href="#skills" class="mobile-link hover:text-honorBlue">Skills</a>
+            <a href="#projects" class="mobile-link hover:text-honorBlue">Projects</a>
+            <a href="#internships" class="mobile-link hover:text-honorBlue">Internships</a>
+            <a href="#languages" class="mobile-link hover:text-honorBlue">Languages</a>
+            <a href="#contact" class="mobile-link hover:text-honorBlue">Contact</a>
+            <button onclick="openResumePopup()" class="mt-8 px-8 py-3 bg-blue-600 text-white rounded-full text-lg">View Resume</button>
         </div>
-      </div>
+    </nav>
 
-      <!-- IIT Madras Workshop -->
-      <div class="internship-card flex items-start space-x-4 mt-4 p-4 rounded-md bg-gray-50 dark:bg-gray-700">
-        <img src="https://img.icons8.com/fluency/48/classroom.png" alt="Workshop Icon" class="w-10 h-10 mt-1">
-        <div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">IIT Madras Workshop</h3>
-          <p>Data Science <span class="text-gray-700 dark:text-gray-300">(Mar 2025)</span></p>
-        </div>
-      </div>
+    <main>
+        <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden pt-20">
+            <div class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+                <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-400/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob dark:bg-blue-600/10"></div>
+                <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-400/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000 dark:bg-purple-600/10"></div>
+                <div class="absolute bottom-1/4 left-1/3 w-96 h-96 bg-pink-400/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000 dark:bg-pink-600/10"></div>
+            </div>
 
-    </div>
-  </section>
-</main>
+            <div class="z-10 reveal active">
+                <div class="mb-8 relative inline-block group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-40 group-hover:opacity-60 transition duration-500"></div>
+                    <img src="images.jpg" alt="Ragupathi C" class="relative w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-white dark:border-gray-800 shadow-2xl object-cover mx-auto transition transform group-hover:scale-105 duration-500">
+                </div>
 
-<script>
-  // Scroll Animation for Internship Cards
-  const internshipCards = document.querySelectorAll('.internship-card');
-  const internshipObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.2 });
+                <p class="text-honorBlue font-bold tracking-[0.2em] uppercase mb-4 text-xs md:text-sm animate-fade-in-up">Portfolio 2025</p>
+                
+                <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-6 text-gray-900 dark:text-white">
+                    Data Driven.<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Future Focused.</span>
+                </h1>
+                
+                <p class="text-lg md:text-2xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed mb-10">
+                    I am Ragupathi C. An AI & Data Science Engineer building the next generation of intelligent systems.
+                </p>
+                
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="#projects" class="px-8 py-4 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transform hover:-translate-y-1">
+                        View My Work
+                    </a>
+                    <a href="https://www.linkedin.com/in/ragupathi-c-033056288/" target="_blank" class="px-8 py-4 border border-gray-300 dark:border-gray-700 rounded-full font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition transform hover:-translate-y-1">
+                        LinkedIn Profile
+                    </a>
+                </div>
+            </div>
 
-  internshipCards.forEach(card => {
-    internshipObserver.observe(card);
-  });
-</script>
+            <div class="absolute bottom-10 animate-bounce text-gray-400">
+                <i class="fas fa-chevron-down text-xl"></i>
+            </div>
+        </section>
 
+        <section id="about" class="max-w-6xl mx-auto px-6 py-24 border-t border-gray-200 dark:border-gray-800">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                     <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Engineering Clarity <br>from Complexity.</h2>
+                     <div class="w-20 h-1 bg-blue-600 mb-8"></div>
+                     <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                        I am a B.Tech student in <strong>Artificial Intelligence and Data Science</strong> at Paavai College of Engineering. My work bridges the gap between raw data and actionable insights.
+                    </p>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                        Passionate about Cloud Computing, Python, and Blockchain. I aspire to solve real-world business challenges and eventually build scalable AI-driven startups.
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="text-center">
+                            <h3 class="text-3xl font-bold text-gray-900 dark:text-white">7.45</h3>
+                            <p class="text-xs uppercase tracking-wide text-gray-500">CGPA</p>
+                        </div>
+                        <div class="w-px bg-gray-300 dark:bg-gray-700 h-12"></div>
+                        <div class="text-center">
+                            <h3 class="text-3xl font-bold text-gray-900 dark:text-white">2026</h3>
+                            <p class="text-xs uppercase tracking-wide text-gray-500">Graduation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal delay-200 relative">
+                     <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-3xl transform rotate-3 opacity-20"></div>
+                     <div class="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-2xl relative border border-gray-100 dark:border-gray-800">
+                        <h3 class="text-xl font-bold mb-4">Core Strengths</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+                                <div>
+                                    <strong class="block text-gray-900 dark:text-white">Self-Motivated</strong>
+                                    <span class="text-sm text-gray-500">Thriving in challenges and learning independently.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-purple-500 mt-1"></i>
+                                <div>
+                                    <strong class="block text-gray-900 dark:text-white">Adaptable</strong>
+                                    <span class="text-sm text-gray-500">Quickly adjusting to new technologies and environments.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                <div>
+                                    <strong class="block text-gray-900 dark:text-white">Problem Solver</strong>
+                                    <span class="text-sm text-gray-500">Leveraging data to drive meaningful decisions.</span>
+                                </div>
+                            </li>
+                        </ul>
+                     </div>
+                </div>
+            </div>
+        </section>
 
-<main class="max-w-5xl mx-auto px-4">
-    <section id="certificates" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
-      <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">Certificates & Online Internships</h2>
-      <ul class="list-disc list-inside space-y-2">
-        <li><strong>AWS Academy Cloud Virtual Internship</strong> – Jan–Mar 2024 <a href="AWS_Internship.pdf" target="_blank" class="text-blue-400 underline">[View]</a></li>
-         <li><strong>National Level Workshop on IOS App Development</strong> – March 2024  <a href="IOS_App_Workshop.pdf" target="_blank" class="text-blue-400 underline ml-2">[View]</a>
-        <li><strong>Google for Developers AI-ML Internship</strong> – Apr–Jun 2024 <a href="Google_ML_Internship.pdf" target="_blank" class="text-blue-400 underline">[View]</a></li>
-        <li><strong>IIT Madras – Data Science Workshop (Top Engineers India)</strong> – Mar 2025 <a href="IIT_DS_Workshop.pdf" target="_blank" class="text-blue-400 underline">[View]</a></li>
-        <li><strong>Google Data Analytics Professional Certificate</strong> – May 2025 <a href="Google_Data_Analytics.pdf" target="_blank" class="text-blue-400 underline">[View]</a></li> 
-</li>
-    </ul>
-    </section>
+        <section id="education" class="bg-white dark:bg-gray-900 py-24 transition-colors duration-500">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="reveal mb-16 text-center">
+                    <span class="text-blue-600 font-bold tracking-widest uppercase text-xs">Academic Journey</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">Education History</h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="reveal group p-8 bg-gray-50 dark:bg-black rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-blue-500 dark:hover:border-blue-500 transition duration-500">
+                        <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition">
+                            <i class="fas fa-graduation-cap text-xl"></i>
+                        </div>
+                        <span class="text-xs font-bold text-gray-400 uppercase">2022 – 2026</span>
+                        <h3 class="font-bold text-xl mt-2 mb-1">B.Tech AI & DS</h3>
+                        <p class="text-sm text-gray-500 mb-4">Paavai College of Engineering</p>
+                        <div class="inline-block px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 text-xs font-bold">
+                            CGPA: 7.45
+                        </div>
+                    </div>
+
+                    <div class="reveal delay-100 group p-8 bg-gray-50 dark:bg-black rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-purple-500 dark:hover:border-purple-500 transition duration-500">
+                        <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center mb-6 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition">
+                            <i class="fas fa-school text-xl"></i>
+                        </div>
+                        <span class="text-xs font-bold text-gray-400 uppercase">2022</span>
+                        <h3 class="font-bold text-xl mt-2 mb-1">HSC</h3>
+                        <p class="text-sm text-gray-500 mb-4">Higher Secondary</p>
+                        <div class="inline-block px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 text-xs font-bold">
+                            Score: 53.67%
+                        </div>
+                    </div>
+
+                    <div class="reveal delay-200 group p-8 bg-gray-50 dark:bg-black rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-green-500 dark:hover:border-green-500 transition duration-500">
+                        <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center mb-6 text-green-600 dark:text-green-400 group-hover:scale-110 transition">
+                            <i class="fas fa-book text-xl"></i>
+                        </div>
+                        <span class="text-xs font-bold text-gray-400 uppercase">2020</span>
+                        <h3 class="font-bold text-xl mt-2 mb-1">SSLC</h3>
+                        <p class="text-sm text-gray-500 mb-4">Secondary School</p>
+                        <div class="inline-block px-3 py-1 rounded-full bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 text-xs font-bold">
+                            Score: 65%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="max-w-7xl mx-auto px-6 py-24">
+            <div class="reveal mb-12 text-center">
+                <span class="text-green-600 font-bold tracking-widest uppercase text-xs">Capabilities</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Technical Arsenal</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+                <div class="reveal p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 hover:border-blue-500 transition duration-300">
+                    <i class="fab fa-python text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="font-bold">Python</h3>
+                </div>
+                <div class="reveal delay-100 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 hover:border-red-500 transition duration-300">
+                    <i class="fab fa-java text-4xl text-red-500 mb-4"></i>
+                    <h3 class="font-bold">Java</h3>
+                </div>
+                <div class="reveal delay-200 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 hover:border-yellow-500 transition duration-300">
+                    <i class="fas fa-database text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="font-bold">MySQL</h3>
+                </div>
+                <div class="reveal delay-300 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 hover:border-orange-500 transition duration-300">
+                    <i class="fab fa-aws text-4xl text-orange-500 mb-4"></i>
+                    <h3 class="font-bold">AWS</h3>
+                </div>
+                <div class="reveal p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 hover:border-blue-400 transition duration-300">
+                    <i class="fab fa-html5 text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="font-bold">Web Dev</h3>
+                </div>
+                <div class="reveal delay-100 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 hover:border-yellow-400 transition duration-300">
+                    <i class="fas fa-chart-bar text-4xl text-yellow-400 mb-4"></i>
+                    <h3 class="font-bold">Power BI</h3>
+                </div>
+                <div class="reveal delay-200 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 hover:border-gray-500 transition duration-300">
+                    <i class="fab fa-github text-4xl text-gray-500 mb-4"></i>
+                    <h3 class="font-bold">GitHub</h3>
+                </div>
+                <div class="reveal delay-300 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 hover:border-green-500 transition duration-300">
+                    <i class="fas fa-file-excel text-4xl text-green-500 mb-4"></i>
+                    <h3 class="font-bold">Excel</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="bg-gray-50 dark:bg-black py-24 transition-colors duration-500">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="reveal mb-16 text-center">
+                     <span class="text-purple-600 font-bold tracking-widest uppercase text-xs">Portfolio</span>
+                     <h2 class="text-3xl md:text-4xl font-bold mt-2">Featured Projects</h2>
+                     <p class="text-gray-500 mt-2 max-w-xl mx-auto">Applying AI and Blockchain to solve real-world problems with elegant code.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="reveal group relative overflow-hidden rounded-[2rem] bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-xl hover:shadow-2xl transition duration-700 hover:-translate-y-2">
+                        <div class="p-10">
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-400">
+                                    <i class="fas fa-cloud-sun text-2xl"></i>
+                                </div>
+                                <span class="px-3 py-1 rounded-full border border-gray-200 dark:border-gray-700 text-xs font-bold uppercase text-gray-500">AI / ML</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-blue-600 transition">The Climate Crusader</h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">An AI-powered weather and climate prediction platform utilizing historical data for accurate forecasting.</p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
+                    </div>
+
+                    <div class="reveal delay-100 group relative overflow-hidden rounded-[2rem] bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-xl hover:shadow-2xl transition duration-700 hover:-translate-y-2">
+                        <div class="p-10">
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-600 dark:text-purple-400">
+                                    <i class="fas fa-microphone text-2xl"></i>
+                                </div>
+                                <span class="px-3 py-1 rounded-full border border-gray-200 dark:border-gray-700 text-xs font-bold uppercase text-gray-500">JS / OpenAI</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-purple-600 transition">Voice AI Assistant</h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">Real-time voice interaction with GPT-based responses. A hands-free virtual assistant experience.</p>
+                            <a href="https://ragupathichinraj.github.io/nexus-virtual-assistant/" target="_blank" class="inline-flex items-center text-sm font-bold text-purple-600 hover:tracking-wide transition-all">
+                                View Live Demo <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
+                    </div>
+
+                    <div class="reveal delay-200 group relative overflow-hidden rounded-[2rem] bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-xl hover:shadow-2xl transition duration-700 hover:-translate-y-2">
+                        <div class="p-10">
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-14 h-14 bg-yellow-100 dark:bg-yellow-900/30 rounded-2xl flex items-center justify-center text-yellow-600 dark:text-yellow-400">
+                                    <i class="fas fa-plane-departure text-2xl"></i>
+                                </div>
+                                <span class="px-3 py-1 rounded-full border border-gray-200 dark:border-gray-700 text-xs font-bold uppercase text-gray-500">Web App</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-yellow-600 transition">Travel Planner</h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">Destination planning made easy. Integrates live weather info using OpenWeatherMap API to help you pack right.</p>
+                            <a href="https://ragupathichinraj.github.io/trip-planner/" target="_blank" class="inline-flex items-center text-sm font-bold text-yellow-600 hover:tracking-wide transition-all">
+                                View Live Demo <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
+                    </div>
+
+                    <div class="reveal delay-300 group relative overflow-hidden rounded-[2rem] bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-xl hover:shadow-2xl transition duration-700 hover:-translate-y-2">
+                        <div class="p-10">
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center text-green-600 dark:text-green-400">
+                                    <i class="fas fa-vote-yea text-2xl"></i>
+                                </div>
+                                <span class="px-3 py-1 rounded-full border border-gray-200 dark:border-gray-700 text-xs font-bold uppercase text-gray-500">Blockchain</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-green-600 transition">Decentralized Voting</h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">A secure and transparent voting platform ensuring immutability and trust using blockchain technology.</p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-green-600 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="internships" class="bg-gray-900 text-white py-24 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gray-800 opacity-20 transform skew-x-12"></div>
+
+            <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16">
+                
+                <div class="reveal">
+                    <h2 class="text-3xl font-bold mb-10 flex items-center gap-4">
+                        <span class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-sm"><i class="fas fa-briefcase"></i></span>
+                        Internships
+                    </h2>
+                    <div class="space-y-8 border-l border-gray-700 ml-5 pl-8">
+                        <div class="relative">
+                            <div class="absolute -left-[39px] w-5 h-5 bg-orange-500 rounded-full border-4 border-gray-900"></div>
+                            <span class="text-xs text-orange-400 font-bold uppercase tracking-widest">Jan – Mar 2024</span>
+                            <h3 class="text-xl font-bold mt-1">AWS Academy</h3>
+                            <p class="text-gray-400">Cloud Virtual Internship</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[39px] w-5 h-5 bg-red-500 rounded-full border-4 border-gray-900"></div>
+                            <span class="text-xs text-red-400 font-bold uppercase tracking-widest">Apr – Jun 2024</span>
+                            <h3 class="text-xl font-bold mt-1">Google for Developers</h3>
+                            <p class="text-gray-400">AI/ML Virtual Internship</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[39px] w-5 h-5 bg-blue-500 rounded-full border-4 border-gray-900"></div>
+                            <span class="text-xs text-blue-400 font-bold uppercase tracking-widest">Mar 2025</span>
+                            <h3 class="text-xl font-bold mt-1">IIT Madras Workshop</h3>
+                            <p class="text-gray-400">Data Science Workshop</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal delay-200">
+                    <h2 class="text-3xl font-bold mb-10 flex items-center gap-4">
+                        <span class="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center text-sm"><i class="fas fa-certificate"></i></span>
+                        Certifications
+                    </h2>
+                    <ul class="space-y-4">
+                        <li class="group flex justify-between items-center bg-gray-800/50 p-4 rounded-xl border border-gray-700 hover:bg-gray-800 transition">
+                            <div>
+                                <h4 class="font-semibold text-gray-200">AWS Academy Cloud</h4>
+                                <p class="text-xs text-gray-500">Jan–Mar 2024</p>
+                            </div>
+                            <a href="AWS_Internship.pdf" target="_blank" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
+                        </li>
+                        <li class="group flex justify-between items-center bg-gray-800/50 p-4 rounded-xl border border-gray-700 hover:bg-gray-800 transition">
+                            <div>
+                                <h4 class="font-semibold text-gray-200">National IOS Workshop</h4>
+                                <p class="text-xs text-gray-500">March 2024</p>
+                            </div>
+                            <a href="IOS_App_Workshop.pdf" target="_blank" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
+                        </li>
+                        <li class="group flex justify-between items-center bg-gray-800/50 p-4 rounded-xl border border-gray-700 hover:bg-gray-800 transition">
+                            <div>
+                                <h4 class="font-semibold text-gray-200">Google AI-ML Internship</h4>
+                                <p class="text-xs text-gray-500">Apr–Jun 2024</p>
+                            </div>
+                            <a href="Google_ML_Internship.pdf" target="_blank" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
+                        </li>
+                        <li class="group flex justify-between items-center bg-gray-800/50 p-4 rounded-xl border border-gray-700 hover:bg-gray-800 transition">
+                            <div>
+                                <h4 class="font-semibold text-gray-200">Google Data Analytics</h4>
+                                <p class="text-xs text-gray-500">May 2025</p>
+                            </div>
+                            <a href="Google_Data_Analytics.pdf" target="_blank" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="languages" class="max-w-7xl mx-auto px-6 py-24 border-t border-gray-200 dark:border-gray-800">
+            <div class="reveal text-center">
+                <span class="text-blue-600 font-bold tracking-widest uppercase text-xs">Communication</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-10">Languages</h2>
+
+                <div class="flex flex-wrap justify-center gap-8 text-lg font-medium">
+                    <span class="flex items-center gap-2">
+                        <div class="w-2 h-2 bg-green-500 rounded-full"></div> Telugu (Native)
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div> English (Fluent)
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div> Tamil (Fluent)
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div> Kannada (Fluent)
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-gray-50 dark:bg-black py-24 border-t border-gray-200 dark:border-gray-800">
+            <div class="max-w-4xl mx-auto px-6 text-center reveal">
+                <h2 class="text-4xl md:text-5xl font-black mb-6">Let's Build the Future.</h2>
+                <p class="text-gray-500 mb-12 text-lg">Currently available for Data Analyst and AI Engineering roles. Open to freelance opportunities.</p>
+                
+                <div class="flex flex-col md:flex-row justify-center gap-6 mb-16">
+                    <a href="mailto:ragupathic2005@gmail.com" class="group bg-white dark:bg-gray-900 p-8 rounded-3xl flex-1 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition duration-300 border border-gray-100 dark:border-gray-800">
+                        <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 group-hover:scale-110 transition">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <p class="text-xs font-bold uppercase text-gray-400 mb-1">Email Me</p>
+                        <p class="text-lg font-bold">ragupathic2005@gmail.com</p>
+                    </a>
+                    
+                    <a href="tel:+918610750690" class="group bg-white dark:bg-gray-900 p-8 rounded-3xl flex-1 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition duration-300 border border-gray-100 dark:border-gray-800">
+                        <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4 text-green-600 group-hover:scale-110 transition">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <p class="text-xs font-bold uppercase text-gray-400 mb-1">Call Me</p>
+                        <p class="text-lg font-bold">+91 8610750690</p>
+                    </a>
+                </div>
+
+                <div class="flex justify-center gap-8">
+                    <a href="https://www.linkedin.com/in/ragupathi-c-033056288/" target="_blank" class="text-gray-400 hover:text-blue-600 transition transform hover:scale-110"><i class="fab fa-linkedin text-4xl"></i></a>
+                    <a href="https://github.com/ragupathichinraj" target="_blank" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition transform hover:scale-110"><i class="fab fa-github text-4xl"></i></a>
+                </div>
+                
+                <p class="text-gray-400 text-sm mt-16">&copy; 2025 Ragupathi C. Built with Passion & Code.</p>
+            </div>
+        </section>
+
     </main>
 
-<main class="max-w-5xl mx-auto px-4">
-  <section id="skills" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
-    <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">💻 Skills</h2>
+    <script>
+        // 1. Mobile Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    <style>
-      .skill-card {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease-in-out;
-      }
-      .skill-card.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      .skill-card:hover {
-        transform: scale(1.05) rotate3d(1, 1, 0, 5deg);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-      }
-      .skill-card:active {
-        transform: scale(0.97) rotate(0deg); /* tap bounce */
-      }
-    </style>
+        // Toggle Menu
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10); // Fade in
+                menuBtn.innerHTML = '<i class="fas fa-times text-2xl"></i>';
+            } else {
+                mobileMenu.classList.add('opacity-0');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                }, 300); // Wait for fade out
+                menuBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+            }
+        });
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg text-gray-700 dark:text-gray-200">
-      
-      <!-- Programming Languages -->
-      <div class="skill-card bg-white shadow-md rounded-md p-6">
-        <h3 class="text-xl font-semibold">Programming Languages</h3>
-        <ul class="flex flex-col space-y-2 mt-4">
-          <li class="flex items-center space-x-2">
-            <img src="https://img.icons8.com/fluency/48/000000/python.png" alt="Python" class="w-8 h-8" />
-            <span class="text-gray-700">Python</span>
-          </li>
-          <li class="flex items-center space-x-2">
-            <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java" class="w-8 h-8" />
-            <span class="text-gray-700">Java</span>
-          </li>
-        </ul>
-      </div>
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('opacity-0');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                }, 300);
+                menuBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+            });
+        });
 
-      <!-- Database -->
-      <div class="skill-card bg-white shadow-md rounded-md p-6">
-        <h3 class="text-xl font-semibold">Database</h3>
-        <ul class="flex flex-col space-y-2 mt-4">
-          <li class="flex items-center space-x-2">
-            <img src="https://img.icons8.com/fluency/48/000000/mysql-logo.png" alt="MySQL" class="w-8 h-8" />
-            <span class="text-gray-700">MySQL</span>
-          </li>
-        </ul>
-      </div>
+        // 2. Dark Mode Logic
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
 
-      <!-- Web Technologies -->
-      <div class="skill-card bg-white shadow-md rounded-md p-6 dark:bg-gray-800">
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Web Technologies</h3>
-        <ul class="flex flex-col space-y-2 mt-4">
-          <li class="flex items-center space-x-2">
-            <img src="https://img.icons8.com/color/48/000000/html-5--v1.png" alt="HTML" class="w-8 h-8" />
-            <span class="text-gray-700 dark:text-gray-200">HTML</span>
-          </li>
-          <li class="flex items-center space-x-2">
-            <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS" class="w-8 h-8" />
-            <span class="text-gray-700 dark:text-gray-200">CSS</span>
-          </li>
-          <li class="flex items-center space-x-2">
-            <img src="https://img.icons8.com/color/48/000000/javascript--v1.png" alt="JavaScript" class="w-8 h-8" />
-            <span class="text-gray-700 dark:text-gray-200">JavaScript</span>
-          </li>
-        </ul>
-      </div>
+        // Apply Theme on Load
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
 
-      <!-- Data Visualization -->
-      <div class="skill-card bg-white shadow-md rounded-md p-6">
-        <h3 class="text-xl font-semibold">Data Visualization Tools</h3>
-        <ul class="flex flex-col space-y-2 mt-4">
-          <li class="flex items-center space-x-2">
-            <img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="Power BI" class="w-8 h-8" />
-            <span class="text-gray-700">Power BI</span>
-          </li>
-          <li class="flex items-center space-x-2">
-            <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" alt="Excel" class="w-8 h-8" />
-            <span class="text-gray-700">MS Excel</span>
-          </li>
-        </ul>
-      </div>
+        // 3. Resume Popup
+        function openResumePopup() {
+            window.open('RagupathiC_Resume2025.pdf', '_blank', 'width=900,height=1100');
+        }
 
-      <!-- Version Control -->
-      <div class="skill-card bg-white shadow-md rounded-md p-6">
-        <h3 class="text-xl font-semibold">Version Control</h3>
-        <ul class="flex flex-col space-y-2 mt-4">
-          <li class="flex items-center space-x-2">
-            <img src="https://img.icons8.com/fluency/48/000000/github.png" alt="GitHub" class="w-8 h-8" />
-            <span class="text-gray-700">GitHub</span>
-          </li>
-        </ul>
-      </div>
+        // 4. Scroll Reveal Animation (Refined)
+        document.addEventListener("DOMContentLoaded", () => {
+            const reveals = document.querySelectorAll('.reveal');
 
-      <!-- Soft Skills -->
-      <div class="skill-card bg-white shadow-md rounded-md p-6">
-        <h3 class="text-xl font-semibold">Soft Skills</h3>
-        <ul class="flex flex-col space-y-2 mt-4">
-          <li class="flex items-center space-x-2">
-            <img src="https://img.icons8.com/fluency/24/visible.png" alt="Observation" class="w-6 h-6" />
-            <span class="text-gray-700">Observation</span>
-          </li>
-          <li class="flex items-center space-x-2">
-            <img src="https://img.icons8.com/fluency/24/decision.png" alt="Decision Making" class="w-6 h-6" />
-            <span class="text-gray-700">Decision Making</span>
-          </li>
-          <li class="flex items-center space-x-2">
-            <img src="https://img.icons8.com/fluency/24/speech-bubble.png" alt="Communication" class="w-6 h-6" />
-            <span class="text-gray-700">Communication</span>
-          </li>
-          <li class="flex items-center space-x-2">
-            <img src="https://img.icons8.com/fluency/24/multiple-devices.png" alt="Multi-tasking" class="w-6 h-6" />
-            <span class="text-gray-700">Multi-tasking</span>
-          </li>
-        </ul>
-      </div>
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.1, 
+                rootMargin: "0px 0px -80px 0px"
+            });
 
-    </div>
-  </section>
-</main>
-
-<script>
-  // Scroll Animation for Skills Cards
-  const skillCards = document.querySelectorAll('.skill-card');
-  const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  skillCards.forEach(card => {
-    skillObserver.observe(card);
-  });
-</script>
-
-
- <main class="max-w-5xl mx-auto px-4">
-  <section id="languages" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
-    <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">
-     🌐 Languages</h2>
-        <li><strong>Telugu</strong> – Native</li>
-        <li><strong>English</strong> – Fluent</li>
-        <li><strong>Tamil</strong> – Fluent</li>
-        <li><strong>Kannada</strong> – Fluent</li>
-      </ul>
-    </section>
-    </main>
-
-<!-- Everything below remains unchanged -->
-<main class="max-w-5xl mx-auto px-4">
-    <section id="contact" class="bg-white mt-10 p-6 rounded-lg shadow dark:bg-gray-800 animate-slide-up">
-      <h2 class="text-2xl font-bold border-b pb-2 mb-4 text-blue-800 dark:text-blue-300">Contact</h2>
-      <ul class="space-y-2">
-        <li>📧 ragupathic2005@gmail.com</li>
-        <li>📍 Veppanapalli, Krishnagiri</li>
-        <li>📞 +91 8610750690</li>
-      </ul>
-      <a href="mailto:ragupathic2005@gmail.com" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Email Me</a>
-    </section>
-  </main>
-  </main>
-
-<!-- Font Awesome (inside <head> if not already included) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<!-- Footer Section -->
-<footer class="bg-gradient-to-r from-blue-600 to-purple-700 text-white text-center py-4 text-sm dark:from-gray-900 dark:to-gray-700">
-  <p class="mb-2">&copy; 2025 Ragupathi C. All rights reserved.</p>
-  <div class="flex justify-center gap-4 text-lg">
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/ragupathi-c-033056288/" target="_blank" class="hover:text-blue-300" aria-label="LinkedIn">
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <!-- GitHub -->
-    <a href="https://github.com/ragupathichinraj" target="_blank" class="hover:text-gray-200" aria-label="GitHub">
-      <i class="fab fa-github"></i>
-    </a>
-    <!-- Gmail -->
-    <a href="mailto:ragupathic2005@gmail.com" class="hover:text-red-300" aria-label="Email">
-      <i class="fas fa-envelope"></i>
-    </a>
-  </div>
-</footer>
-
+            reveals.forEach(el => revealObserver.observe(el));
+        });
+    </script>
 </body>
 </html>
