@@ -36,7 +36,7 @@
                     },
                     animation: {
                         'blob': 'blob 7s infinite',
-                        'fade-up': 'fadeUp 1s ease-out forwards', // ✅ FIXED: Animation Defined
+                        'fade-up': 'fadeUp 1s ease-out forwards', 
                     },
                     keyframes: {
                         blob: {
@@ -45,7 +45,7 @@
                             '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
                             '100%': { transform: 'translate(0px, 0px) scale(1)' },
                         },
-                        fadeUp: { // ✅ FIXED: Keyframes Added
+                        fadeUp: { 
                             '0%': { opacity: '0', transform: 'translateY(20px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
                         },
@@ -166,12 +166,12 @@
                 <p class="text-honorBlue font-bold tracking-[0.2em] uppercase mb-4 text-xs md:text-sm animate-fade-up">RAGUPATHI C</p> 
                 
                 <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-6 text-gray-900 dark:text-white">
-                    Data Driven.<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Future Focused.</span>
+                    Data Analyst.<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Business Insights.</span>
                 </h1>
                 
                 <p class="text-lg md:text-2xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed mb-10">
-                    I am Ragupathi C. An AI & Data Science Engineer building the next generation of intelligent systems.
+                    I analyze, visualize, and interpret data to help businesses make better decisions.
                 </p>
                 
                 <div class="flex flex-wrap gap-4 justify-center">
@@ -454,7 +454,7 @@
                         </li>
                         <li class="group flex justify-between items-center bg-gray-800/50 p-4 rounded-xl border border-gray-700 hover:bg-gray-800 transition">
                             <div>
-                                <h4 class="font-semibold text-gray-200">National IOS Workshop</h4>
+                                <h4 class="font-semibold text-gray-200">National iOS Workshop</h4>
                                 <p class="text-xs text-gray-500">March 2024</p>
                             </div>
                             <a href="IOS_App_Workshop.pdf" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
@@ -503,7 +503,7 @@
         <section id="contact" class="bg-gray-50 dark:bg-black py-24 border-t border-gray-200 dark:border-gray-800">
             <div class="max-w-4xl mx-auto px-6 text-center reveal">
                 <h2 class="text-4xl md:text-5xl font-black mb-6">Let's Build the Future.</h2>
-                <p class="text-gray-500 mb-12 text-lg">Currently available for Data Analyst and AI Engineering roles. Open to freelance opportunities.</p>
+                <p class="text-gray-500 mb-12 text-lg">Currently available for Data Analyst and AI Engineering roles.</p>
                 
                 <div class="flex flex-col md:flex-row justify-center gap-6 mb-16">
                     <a href="mailto:ragupathic2005@gmail.com" class="group bg-white dark:bg-gray-900 p-8 rounded-3xl flex-1 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition duration-300 border border-gray-100 dark:border-gray-800">
@@ -548,13 +548,13 @@
                 // Show Menu
                 mobileMenu.classList.remove('hidden');
                 mobileMenu.classList.add('flex');
-                document.body.classList.add('overflow-hidden'); // ✅ FIXED: Lock Scroll
+                document.body.classList.add('overflow-hidden');
                 setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10);
                 menuBtn.innerHTML = '<i class="fas fa-times text-2xl"></i>';
             } else {
                 // Hide Menu
                 mobileMenu.classList.add('opacity-0');
-                document.body.classList.remove('overflow-hidden'); // ✅ FIXED: Unlock Scroll
+                document.body.classList.remove('overflow-hidden');
                 setTimeout(() => {
                     mobileMenu.classList.add('hidden');
                     mobileMenu.classList.remove('flex');
@@ -567,7 +567,7 @@
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('opacity-0');
-                document.body.classList.remove('overflow-hidden'); // ✅ FIXED: Unlock Scroll
+                document.body.classList.remove('overflow-hidden');
                 setTimeout(() => {
                     mobileMenu.classList.add('hidden');
                     mobileMenu.classList.remove('flex');
