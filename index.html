@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <meta name="description" content="Ragupathi C – AI & Data Science Engineer specializing in Python, Cloud, Data Analytics, and Intelligent Systems.">
+    <meta name="keywords" content="AI Engineer, Data Analyst, Python, AWS, Machine Learning, Portfolio, Ragupathi C, Paavai College">
+    <meta name="author" content="Ragupathi C">
+    
+    <meta property="og:title" content="Ragupathi C | AI & Data Science Engineer">
+    <meta property="og:description" content="Building intelligent, data-driven solutions with AI & Cloud.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images.jpg">
+
     <title>Ragupathi C | AI & Data Science Engineer</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,6 +36,7 @@
                     },
                     animation: {
                         'blob': 'blob 7s infinite',
+                        'fade-up': 'fadeUp 1s ease-out forwards', // ✅ FIXED: Animation Defined
                     },
                     keyframes: {
                         blob: {
@@ -33,7 +44,11 @@
                             '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
                             '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
                             '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        }
+                        },
+                        fadeUp: { // ✅ FIXED: Keyframes Added
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
                     }
                 }
             }
@@ -93,21 +108,21 @@
             </div>
 
             <div class="hidden md:flex items-center gap-4">
-                <button onclick="toggleDarkMode()" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition duration-300">
+                <button aria-label="Toggle Dark Mode" onclick="toggleDarkMode()" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition duration-300">
                     <i class="fas fa-moon dark:hidden text-gray-600"></i>
                     <i class="fas fa-sun hidden dark:inline text-yellow-400"></i>
                 </button>
-                <button onclick="openResumePopup()" class="px-6 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-xs font-bold uppercase tracking-widest hover:scale-105 hover:shadow-lg transition transform duration-300">
+                <a href="RagupathiC_Resume2025.pdf" target="_blank" rel="noopener noreferrer" class="px-6 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-xs font-bold uppercase tracking-widest hover:scale-105 hover:shadow-lg transition transform duration-300">
                     Resume
-                </button>
+                </a>
             </div>
 
             <div class="md:hidden z-50 flex items-center gap-4">
-                <button onclick="toggleDarkMode()" class="p-2">
+                <button aria-label="Toggle Dark Mode" onclick="toggleDarkMode()" class="p-2">
                     <i class="fas fa-moon dark:hidden"></i>
                     <i class="fas fa-sun hidden dark:inline text-yellow-400"></i>
                 </button>
-                <button id="menu-btn" class="focus:outline-none">
+                <button aria-label="Open Menu" id="menu-btn" class="focus:outline-none">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
@@ -121,7 +136,8 @@
             <a href="#internships" class="mobile-link hover:text-honorBlue">Internships</a>
             <a href="#languages" class="mobile-link hover:text-honorBlue">Languages</a>
             <a href="#contact" class="mobile-link hover:text-honorBlue">Contact</a>
-            <button onclick="openResumePopup()" class="mt-8 px-8 py-3 bg-blue-600 text-white rounded-full text-lg">View Resume</button>
+            
+            <a href="RagupathiC_Resume2025.pdf" target="_blank" rel="noopener noreferrer" class="mt-8 px-8 py-3 bg-blue-600 text-white rounded-full text-lg">View Resume</a>
         </div>
     </nav>
 
@@ -136,10 +152,18 @@
             <div class="z-10 reveal active">
                 <div class="mb-8 relative inline-block group">
                     <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-40 group-hover:opacity-60 transition duration-500"></div>
-                    <img src="images.jpg" alt="Ragupathi C" class="relative w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-white dark:border-gray-800 shadow-2xl object-cover mx-auto transition transform group-hover:scale-105 duration-500">
+                    <img 
+                        src="images.jpg" 
+                        alt="Ragupathi C" 
+                        width="192" 
+                        height="192" 
+                        loading="eager" 
+                        decoding="async" 
+                        class="relative w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-white dark:border-gray-800 shadow-2xl object-cover mx-auto transition transform group-hover:scale-105 duration-500"
+                    >
                 </div>
 
-                <p class="text-honorBlue font-bold tracking-[0.2em] uppercase mb-4 text-xs md:text-sm animate-fade-in-up">RAGUPATHI C</p>
+                <p class="text-honorBlue font-bold tracking-[0.2em] uppercase mb-4 text-xs md:text-sm animate-fade-up">RAGUPATHI C</p> 
                 
                 <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-6 text-gray-900 dark:text-white">
                     Data Driven.<br>
@@ -154,7 +178,7 @@
                     <a href="#projects" class="px-8 py-4 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transform hover:-translate-y-1">
                         View My Work
                     </a>
-                    <a href="https://www.linkedin.com/in/ragupathi-c-033056288/" target="_blank" class="px-8 py-4 border border-gray-300 dark:border-gray-700 rounded-full font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition transform hover:-translate-y-1">
+                    <a href="https://www.linkedin.com/in/ragupathi-c-033056288/" target="_blank" rel="noopener noreferrer" class="px-8 py-4 border border-gray-300 dark:border-gray-700 rounded-full font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition transform hover:-translate-y-1">
                         LinkedIn Profile
                     </a>
                 </div>
@@ -178,7 +202,7 @@
                     </p>
                     <div class="flex gap-4">
                         <div class="text-center">
-                            <h3 class="text-3xl font-bold text-gray-900 dark:text-white">7.45</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 dark:text-white">7.6</h3>
                             <p class="text-xs uppercase tracking-wide text-gray-500">CGPA</p>
                         </div>
                         <div class="w-px bg-gray-300 dark:bg-gray-700 h-12"></div>
@@ -236,7 +260,7 @@
                         <h3 class="font-bold text-xl mt-2 mb-1">B.Tech AI & DS</h3>
                         <p class="text-sm text-gray-500 mb-4">Paavai College of Engineering</p>
                         <div class="inline-block px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 text-xs font-bold">
-                            CGPA: 7.45
+                            Overall Percentage: 76
                         </div>
                     </div>
 
@@ -248,7 +272,7 @@
                         <h3 class="font-bold text-xl mt-2 mb-1">HSC</h3>
                         <p class="text-sm text-gray-500 mb-4">Higher Secondary</p>
                         <div class="inline-block px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 text-xs font-bold">
-                            Score: 53.67%
+                            Overall Percentage: 53.67
                         </div>
                     </div>
 
@@ -260,7 +284,7 @@
                         <h3 class="font-bold text-xl mt-2 mb-1">SSLC</h3>
                         <p class="text-sm text-gray-500 mb-4">Secondary School</p>
                         <div class="inline-block px-3 py-1 rounded-full bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 text-xs font-bold">
-                            Score: 65%
+                            Overall Percentage: 65
                         </div>
                     </div>
                 </div>
@@ -342,7 +366,7 @@
                             </div>
                             <h3 class="text-2xl font-bold mb-3 group-hover:text-purple-600 transition">Voice AI Assistant</h3>
                             <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">Real-time voice interaction with GPT-based responses. A hands-free virtual assistant experience.</p>
-                            <a href="https://ragupathichinraj.github.io/nexus-virtual-assistant/" target="_blank" class="inline-flex items-center text-sm font-bold text-purple-600 hover:tracking-wide transition-all">
+                            <a href="https://ragupathichinraj.github.io/nexus-virtual-assistant/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-bold text-purple-600 hover:tracking-wide transition-all">
                                 View Live Demo <i class="fas fa-arrow-right ml-2 text-xs"></i>
                             </a>
                         </div>
@@ -359,7 +383,7 @@
                             </div>
                             <h3 class="text-2xl font-bold mb-3 group-hover:text-yellow-600 transition">Travel Planner</h3>
                             <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">Destination planning made easy. Integrates live weather info using OpenWeatherMap API to help you pack right.</p>
-                            <a href="https://ragupathichinraj.github.io/trip-planner/" target="_blank" class="inline-flex items-center text-sm font-bold text-yellow-600 hover:tracking-wide transition-all">
+                            <a href="https://ragupathichinraj.github.io/trip-planner/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-bold text-yellow-600 hover:tracking-wide transition-all">
                                 View Live Demo <i class="fas fa-arrow-right ml-2 text-xs"></i>
                             </a>
                         </div>
@@ -426,28 +450,28 @@
                                 <h4 class="font-semibold text-gray-200">AWS Academy Cloud</h4>
                                 <p class="text-xs text-gray-500">Jan–Mar 2024</p>
                             </div>
-                            <a href="AWS_Internship.pdf" target="_blank" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
+                            <a href="AWS_Internship.pdf" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
                         </li>
                         <li class="group flex justify-between items-center bg-gray-800/50 p-4 rounded-xl border border-gray-700 hover:bg-gray-800 transition">
                             <div>
                                 <h4 class="font-semibold text-gray-200">National IOS Workshop</h4>
                                 <p class="text-xs text-gray-500">March 2024</p>
                             </div>
-                            <a href="IOS_App_Workshop.pdf" target="_blank" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
+                            <a href="IOS_App_Workshop.pdf" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
                         </li>
                         <li class="group flex justify-between items-center bg-gray-800/50 p-4 rounded-xl border border-gray-700 hover:bg-gray-800 transition">
                             <div>
                                 <h4 class="font-semibold text-gray-200">Google AI-ML Internship</h4>
                                 <p class="text-xs text-gray-500">Apr–Jun 2024</p>
                             </div>
-                            <a href="Google_ML_Internship.pdf" target="_blank" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
+                            <a href="Google_ML_Internship.pdf" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
                         </li>
                         <li class="group flex justify-between items-center bg-gray-800/50 p-4 rounded-xl border border-gray-700 hover:bg-gray-800 transition">
                             <div>
                                 <h4 class="font-semibold text-gray-200">Google Data Analytics</h4>
                                 <p class="text-xs text-gray-500">May 2025</p>
                             </div>
-                            <a href="Google_Data_Analytics.pdf" target="_blank" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
+                            <a href="Google_Data_Analytics.pdf" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -500,8 +524,8 @@
                 </div>
 
                 <div class="flex justify-center gap-8">
-                    <a href="https://www.linkedin.com/in/ragupathi-c-033056288/" target="_blank" class="text-gray-400 hover:text-blue-600 transition transform hover:scale-110"><i class="fab fa-linkedin text-4xl"></i></a>
-                    <a href="https://github.com/ragupathichinraj" target="_blank" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition transform hover:scale-110"><i class="fab fa-github text-4xl"></i></a>
+                    <a href="https://www.linkedin.com/in/ragupathi-c-033056288/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-600 transition transform hover:scale-110" aria-label="LinkedIn"><i class="fab fa-linkedin text-4xl"></i></a>
+                    <a href="https://github.com/ragupathichinraj" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition transform hover:scale-110" aria-label="GitHub"><i class="fab fa-github text-4xl"></i></a>
                 </div>
                 
                 <p class="text-gray-400 text-sm mt-16"> © 2025 Ragupathi C. All rights reserved.</p>
@@ -512,7 +536,7 @@
     </main>
 
     <script>
-        // 1. Mobile Menu Logic
+        // 1. Mobile Menu Logic with Scroll Lock
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -521,16 +545,20 @@
         menuBtn.addEventListener('click', () => {
             const isHidden = mobileMenu.classList.contains('hidden');
             if (isHidden) {
+                // Show Menu
                 mobileMenu.classList.remove('hidden');
                 mobileMenu.classList.add('flex');
-                setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10); // Fade in
+                document.body.classList.add('overflow-hidden'); // ✅ FIXED: Lock Scroll
+                setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10);
                 menuBtn.innerHTML = '<i class="fas fa-times text-2xl"></i>';
             } else {
+                // Hide Menu
                 mobileMenu.classList.add('opacity-0');
+                document.body.classList.remove('overflow-hidden'); // ✅ FIXED: Unlock Scroll
                 setTimeout(() => {
                     mobileMenu.classList.add('hidden');
                     mobileMenu.classList.remove('flex');
-                }, 300); // Wait for fade out
+                }, 300);
                 menuBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
             }
         });
@@ -539,6 +567,7 @@
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('opacity-0');
+                document.body.classList.remove('overflow-hidden'); // ✅ FIXED: Unlock Scroll
                 setTimeout(() => {
                     mobileMenu.classList.add('hidden');
                     mobileMenu.classList.remove('flex');
@@ -561,12 +590,7 @@
             document.documentElement.classList.remove('dark');
         }
 
-        // 3. Resume Popup
-        function openResumePopup() {
-            window.open('RagupathiC_Resume2025.pdf', '_blank', 'width=900,height=1100');
-        }
-
-        // 4. Scroll Reveal Animation (Refined)
+        // 3. Scroll Reveal Animation (Refined)
         document.addEventListener("DOMContentLoaded", () => {
             const reveals = document.querySelectorAll('.reveal');
 
