@@ -15,6 +15,8 @@
 
     <title>Ragupathi C | AI & Data Science Engineer</title>
     
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -56,11 +58,11 @@
     </script>
 
     <style>
-        /* Premium "Honor-like" Reveal Animation */
+        /* Reveal Animation */
         .reveal {
             opacity: 0;
-            transform: translateY(50px) scale(0.98);
-            transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+            transform: translateY(40px) scale(0.98);
+            transition: all 1.0s cubic-bezier(0.23, 1, 0.32, 1);
             filter: blur(4px);
         }
         .reveal.active {
@@ -69,19 +71,20 @@
             filter: blur(0);
         }
 
-        /* Glassmorphism for Navbar */
+        /* Glass Navbar */
         .glass-nav {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px) saturate(180%);
+            -webkit-backdrop-filter: blur(12px) saturate(180%);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
         .dark .glass-nav {
-            background: rgba(10, 10, 10, 0.7);
+            background: rgba(10, 10, 10, 0.85);
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
         /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
@@ -92,58 +95,57 @@
 <body class="bg-honorGray text-gray-900 dark:bg-honorDark dark:text-gray-100 transition-colors duration-700 antialiased selection:bg-blue-500 selection:text-white">
 
     <nav class="fixed w-full z-50 top-0 glass-nav transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 py-2 md:px-6 md:py-4 flex justify-between items-center">
-        
-        <a href="#" class="text-lg md:text-xl font-bold tracking-tight z-50 relative">
-            RAGUPATHI C
-        </a>
-        
-        <div class="hidden md:flex space-x-6 text-sm font-medium tracking-wide text-gray-600 dark:text-gray-400">
-            <a href="#about" class="hover:text-honorBlue hover:scale-105 transition duration-300">About</a>
-            <a href="#education" class="hover:text-honorBlue hover:scale-105 transition duration-300">Education</a>
-            <a href="#skills" class="hover:text-honorBlue hover:scale-105 transition duration-300">Skills</a>
-            <a href="#projects" class="hover:text-honorBlue hover:scale-105 transition duration-300">Projects</a>
-            <a href="#internships" class="hover:text-honorBlue hover:scale-105 transition duration-300">Internships</a>
-            <a href="#languages" class="hover:text-honorBlue hover:scale-105 transition duration-300">Languages</a>
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            
+            <a href="#" class="text-xl font-bold tracking-tight z-50 relative">
+                RAGUPATHI C
+            </a>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide text-gray-600 dark:text-gray-400">
+                <a href="#about" class="hover:text-honorBlue hover:scale-105 transition duration-300">About</a>
+                <a href="#education" class="hover:text-honorBlue hover:scale-105 transition duration-300">Education</a>
+                <a href="#skills" class="hover:text-honorBlue hover:scale-105 transition duration-300">Skills</a>
+                <a href="#projects" class="hover:text-honorBlue hover:scale-105 transition duration-300">Projects</a>
+                <a href="#internships" class="hover:text-honorBlue hover:scale-105 transition duration-300">Experience</a>
+                <a href="#languages" class="hover:text-honorBlue hover:scale-105 transition duration-300">Languages</a>
+                <a href="#contact" class="hover:text-honorBlue hover:scale-105 transition duration-300">Contact</a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-4">
+                <button aria-label="Toggle Dark Mode" onclick="toggleDarkMode()" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition duration-300">
+                    <i class="fas fa-moon dark:hidden text-gray-600"></i>
+                    <i class="fas fa-sun hidden dark:inline text-yellow-400"></i>
+                </button>
+                <a href="RagupathiC_Resume2025.pdf?v=2" target="_blank" rel="noopener noreferrer" class="px-6 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-xs font-bold uppercase tracking-widest hover:scale-105 hover:shadow-lg transition transform duration-300">
+                    Resume
+                </a>
+            </div>
+
+            <div class="md:hidden z-50 flex items-center gap-4">
+                <button aria-label="Toggle Dark Mode" onclick="toggleDarkMode()" class="p-2">
+                    <i class="fas fa-moon dark:hidden text-gray-600"></i>
+                    <i class="fas fa-sun hidden dark:inline text-yellow-400"></i>
+                </button>
+                <button aria-label="Open Menu" id="menu-btn" class="focus:outline-none p-1">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
         </div>
 
-        <div class="hidden md:flex items-center gap-4">
-            <button aria-label="Toggle Dark Mode" onclick="toggleDarkMode()" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition duration-300">
-                <i class="fas fa-moon dark:hidden text-gray-600"></i>
-                <i class="fas fa-sun hidden dark:inline text-yellow-400"></i>
-            </button>
-            <a href="RagupathiC_Resume2025.pdf?v=2" target="_blank" rel="noopener noreferrer" class="px-6 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-xs font-bold uppercase tracking-widest hover:scale-105 hover:shadow-lg transition transform duration-300">
-                Resume
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white/95 dark:bg-black/95 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800 z-40 flex-col items-center py-8 space-y-6 hidden opacity-0 transition-all duration-300 shadow-2xl">
+            <a href="#about" class="mobile-link text-lg font-medium hover:text-honorBlue transition-colors">About</a>
+            <a href="#education" class="mobile-link text-lg font-medium hover:text-honorBlue transition-colors">Education</a>
+            <a href="#skills" class="mobile-link text-lg font-medium hover:text-honorBlue transition-colors">Skills</a>
+            <a href="#projects" class="mobile-link text-lg font-medium hover:text-honorBlue transition-colors">Projects</a>
+            <a href="#internships" class="mobile-link text-lg font-medium hover:text-honorBlue transition-colors">Experience</a>
+            <a href="#languages" class="mobile-link text-lg font-medium hover:text-honorBlue transition-colors">Languages</a>
+            <a href="#contact" class="mobile-link text-lg font-medium hover:text-honorBlue transition-colors">Contact</a>
+            
+            <a href="RagupathiC_Resume2025.pdf?v=2" target="_blank" rel="noopener noreferrer" class="mt-4 px-8 py-3 bg-blue-600 text-white rounded-full text-base font-bold shadow-md hover:bg-blue-700 transition transform hover:scale-105">
+                View Resume
             </a>
         </div>
-
-        <div class="md:hidden z-50 flex items-center gap-3">
-            <button aria-label="Toggle Dark Mode" onclick="toggleDarkMode()" class="p-2">
-                <i class="fas fa-moon dark:hidden text-gray-600 text-lg"></i>
-                <i class="fas fa-sun hidden dark:inline text-yellow-400 text-lg"></i>
-            </button>
-            <button aria-label="Open Menu" id="menu-btn" class="focus:outline-none p-1">
-                <i class="fas fa-bars text-xl"></i>
-            </button>
-        </div>
-    </div>
-
-    <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white/95 dark:bg-black/95 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800 z-40 flex-col items-center py-6 space-y-4 hidden opacity-0 transition-all duration-300 shadow-2xl">
-    
-    <a href="#about" class="mobile-link text-base font-medium hover:text-honorBlue transition-colors">About</a>
-    <a href="#education" class="mobile-link text-base font-medium hover:text-honorBlue transition-colors">Education</a>
-    <a href="#skills" class="mobile-link text-base font-medium hover:text-honorBlue transition-colors">Skills</a>
-    <a href="#projects" class="mobile-link text-base font-medium hover:text-honorBlue transition-colors">Projects</a>
-    <a href="#internships" class="mobile-link text-base font-medium hover:text-honorBlue transition-colors">Internships</a>
-    <a href="#languages" class="mobile-link text-base font-medium hover:text-honorBlue transition-colors">Languages</a>
-    <a href="#contact" class="mobile-link text-base font-medium hover:text-honorBlue transition-colors">Contact</a>
-    
-    <a href="RagupathiC_Resume2025.pdf?v=2" target="_blank" rel="noopener noreferrer" class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-full text-sm font-bold shadow-md hover:bg-blue-700 transition transform hover:scale-105">
-        View Resume
-    </a>
-
-</div>
-</nav>
+    </nav>
 
     <main>
         <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden pt-20">
@@ -153,36 +155,32 @@
                 <div class="absolute bottom-1/4 left-1/3 w-96 h-96 bg-pink-400/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000 dark:bg-pink-600/10"></div>
             </div>
 
-            <div class="z-10 reveal active">
+            <div class="z-10 reveal active max-w-5xl mx-auto">
                 <div class="mb-8 relative inline-block group">
                     <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-40 group-hover:opacity-60 transition duration-500"></div>
                     <img 
                         src="images.jpg" 
                         alt="Ragupathi C" 
-                        width="192" 
-                        height="192" 
-                        loading="eager" 
-                        decoding="async" 
-                        class="relative w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-white dark:border-gray-800 shadow-2xl object-cover mx-auto transition transform group-hover:scale-105 duration-500"
+                        class="relative w-36 h-36 md:w-48 md:h-48 rounded-full border-4 border-white dark:border-gray-800 shadow-2xl object-cover mx-auto transition transform group-hover:scale-105 duration-500"
                     >
                 </div>
 
-                <p class="text-honorBlue font-bold tracking-[0.2em] uppercase mb-4 text-xs md:text-sm animate-fade-up">RAGUPATHI C</p> 
+                <p class="text-honorBlue font-bold tracking-[0.2em] uppercase mb-4 text-sm md:text-base animate-fade-up">RAGUPATHI C</p> 
                 
-                <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-6 text-gray-900 dark:text-white">
+                <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-[0.95] mb-6 text-gray-900 dark:text-white">
                     Data Analyst.<br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Business Insights.</span>
                 </h1>
                 
-                <p class="text-lg md:text-2xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed mb-10">
+                <p class="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed mb-10">
                     I analyze, visualize, and interpret data to help businesses make better decisions.
                 </p>
                 
                 <div class="flex flex-wrap gap-4 justify-center">
-                    <a href="#projects" class="px-8 py-4 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transform hover:-translate-y-1">
+                    <a href="#projects" class="px-8 py-3 bg-blue-600 text-white rounded-full text-base font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transform hover:-translate-y-1">
                         View My Work
                     </a>
-                    <a href="https://www.linkedin.com/in/ragupathi-c-033056288/" target="_blank" rel="noopener noreferrer" class="px-8 py-4 border border-gray-300 dark:border-gray-700 rounded-full font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition transform hover:-translate-y-1">
+                    <a href="https://www.linkedin.com/in/ragupathi-c-033056288/" target="_blank" rel="noopener noreferrer" class="px-8 py-3 border border-gray-300 dark:border-gray-700 rounded-full text-base font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition transform hover:-translate-y-1">
                         LinkedIn Profile
                     </a>
                 </div>
@@ -197,49 +195,51 @@
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="reveal">
                      <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Engineering Clarity <br>from Complexity.</h2>
-                     <div class="w-20 h-1 bg-blue-600 mb-8"></div>
-                     <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                     <div class="w-16 h-1 bg-blue-600 mb-8"></div>
+                     
+                     <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed font-light">
                         I am a B.Tech student in <strong>Artificial Intelligence and Data Science</strong> at Paavai College of Engineering. My work bridges the gap between raw data and actionable insights.
                     </p>
-                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                        Passionate about Cloud Computing, Python, and Blockchain. I aspire to solve real-world business challenges and eventually build scalable AI-driven startups.
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed font-light">
+                        Passionately exploring Cloud Computing, Python, and Blockchain. I aspire to solve real-world business challenges and build scalable AI-driven solutions.
                     </p>
-                    <div class="flex gap-4">
+                    
+                    <div class="flex gap-8">
                         <div class="text-center">
                             <h3 class="text-3xl font-bold text-gray-900 dark:text-white">7.6</h3>
-                            <p class="text-xs uppercase tracking-wide text-gray-500">CGPA</p>
+                            <p class="text-xs uppercase tracking-wide text-gray-500 mt-1">CGPA</p>
                         </div>
                         <div class="w-px bg-gray-300 dark:bg-gray-700 h-12"></div>
                         <div class="text-center">
                             <h3 class="text-3xl font-bold text-gray-900 dark:text-white">2026</h3>
-                            <p class="text-xs uppercase tracking-wide text-gray-500">Graduation</p>
+                            <p class="text-xs uppercase tracking-wide text-gray-500 mt-1">Graduation</p>
                         </div>
                     </div>
                 </div>
                 <div class="reveal delay-200 relative">
                      <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-3xl transform rotate-3 opacity-20"></div>
                      <div class="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-2xl relative border border-gray-100 dark:border-gray-800">
-                        <h3 class="text-xl font-bold mb-4">Core Strengths</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+                        <h3 class="text-xl font-bold mb-6">Core Strengths</h3>
+                        <ul class="space-y-5">
+                            <li class="flex items-start gap-4">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 text-xl"></i>
                                 <div>
-                                    <strong class="block text-gray-900 dark:text-white">Self-Motivated</strong>
-                                    <span class="text-sm text-gray-500">Thriving in challenges and learning independently.</span>
+                                    <strong class="block text-lg text-gray-900 dark:text-white mb-1">Self-Motivated</strong>
+                                    <span class="text-sm text-gray-500 leading-relaxed">Thriving in challenges and learning independently.</span>
                                 </div>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-purple-500 mt-1"></i>
+                            <li class="flex items-start gap-4">
+                                <i class="fas fa-check-circle text-purple-500 mt-1 text-xl"></i>
                                 <div>
-                                    <strong class="block text-gray-900 dark:text-white">Adaptable</strong>
-                                    <span class="text-sm text-gray-500">Quickly adjusting to new technologies and environments.</span>
+                                    <strong class="block text-lg text-gray-900 dark:text-white mb-1">Adaptable</strong>
+                                    <span class="text-sm text-gray-500 leading-relaxed">Quickly adjusting to new technologies and environments.</span>
                                 </div>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <li class="flex items-start gap-4">
+                                <i class="fas fa-check-circle text-green-500 mt-1 text-xl"></i>
                                 <div>
-                                    <strong class="block text-gray-900 dark:text-white">Problem Solver</strong>
-                                    <span class="text-sm text-gray-500">Leveraging data to drive meaningful decisions.</span>
+                                    <strong class="block text-lg text-gray-900 dark:text-white mb-1">Problem Solver</strong>
+                                    <span class="text-sm text-gray-500 leading-relaxed">Leveraging data to drive meaningful decisions.</span>
                                 </div>
                             </li>
                         </ul>
@@ -249,7 +249,7 @@
         </section>
 
         <section id="education" class="bg-white dark:bg-gray-900 py-24 transition-colors duration-500">
-            <div class="max-w-5xl mx-auto px-6">
+            <div class="max-w-6xl mx-auto px-6">
                 <div class="reveal mb-16 text-center">
                     <span class="text-blue-600 font-bold tracking-widest uppercase text-xs">Academic Journey</span>
                     <h2 class="text-3xl md:text-4xl font-bold mt-2">Education History</h2>
@@ -257,10 +257,10 @@
 
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="reveal group p-8 bg-gray-50 dark:bg-black rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-blue-500 dark:hover:border-blue-500 transition duration-500">
-                        <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition">
-                            <i class="fas fa-graduation-cap text-xl"></i>
+                        <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition">
+                            <i class="fas fa-graduation-cap text-2xl"></i>
                         </div>
-                        <span class="text-xs font-bold text-gray-400 uppercase">2022 – 2026</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">2022 – 2026</span>
                         <h3 class="font-bold text-xl mt-2 mb-1">B.Tech AI & DS</h3>
                         <p class="text-sm text-gray-500 mb-4">Paavai College of Engineering</p>
                         <div class="inline-block px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 text-xs font-bold">
@@ -269,10 +269,10 @@
                     </div>
 
                     <div class="reveal delay-100 group p-8 bg-gray-50 dark:bg-black rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-purple-500 dark:hover:border-purple-500 transition duration-500">
-                        <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center mb-6 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition">
-                            <i class="fas fa-school text-xl"></i>
+                        <div class="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center mb-6 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition">
+                            <i class="fas fa-school text-2xl"></i>
                         </div>
-                        <span class="text-xs font-bold text-gray-400 uppercase">2022</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">2022</span>
                         <h3 class="font-bold text-xl mt-2 mb-1">HSC</h3>
                         <p class="text-sm text-gray-500 mb-4">Higher Secondary</p>
                         <div class="inline-block px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 text-xs font-bold">
@@ -281,10 +281,10 @@
                     </div>
 
                     <div class="reveal delay-200 group p-8 bg-gray-50 dark:bg-black rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-green-500 dark:hover:border-green-500 transition duration-500">
-                        <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center mb-6 text-green-600 dark:text-green-400 group-hover:scale-110 transition">
-                            <i class="fas fa-book text-xl"></i>
+                        <div class="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center mb-6 text-green-600 dark:text-green-400 group-hover:scale-110 transition">
+                            <i class="fas fa-book text-2xl"></i>
                         </div>
-                        <span class="text-xs font-bold text-gray-400 uppercase">2020</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">2020</span>
                         <h3 class="font-bold text-xl mt-2 mb-1">SSLC</h3>
                         <p class="text-sm text-gray-500 mb-4">Secondary School</p>
                         <div class="inline-block px-3 py-1 rounded-full bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 text-xs font-bold">
@@ -304,35 +304,35 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
                 <div class="reveal p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 hover:border-blue-500 transition duration-300">
                     <i class="fab fa-python text-4xl text-blue-500 mb-4"></i>
-                    <h3 class="font-bold">Python</h3>
+                    <h3 class="font-bold text-base">Python</h3>
                 </div>
                 <div class="reveal delay-100 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 hover:border-red-500 transition duration-300">
                     <i class="fab fa-java text-4xl text-red-500 mb-4"></i>
-                    <h3 class="font-bold">Java</h3>
+                    <h3 class="font-bold text-base">Java</h3>
                 </div>
                 <div class="reveal delay-200 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 hover:border-yellow-500 transition duration-300">
                     <i class="fas fa-database text-4xl text-yellow-500 mb-4"></i>
-                    <h3 class="font-bold">MySQL</h3>
+                    <h3 class="font-bold text-base">MySQL</h3>
                 </div>
                 <div class="reveal delay-300 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 hover:border-orange-500 transition duration-300">
                     <i class="fab fa-aws text-4xl text-orange-500 mb-4"></i>
-                    <h3 class="font-bold">AWS</h3>
+                    <h3 class="font-bold text-base">AWS</h3>
                 </div>
                 <div class="reveal p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 hover:border-blue-400 transition duration-300">
                     <i class="fab fa-html5 text-4xl text-blue-400 mb-4"></i>
-                    <h3 class="font-bold">Web Dev</h3>
+                    <h3 class="font-bold text-base">Web Dev</h3>
                 </div>
                 <div class="reveal delay-100 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 hover:border-yellow-400 transition duration-300">
                     <i class="fas fa-chart-bar text-4xl text-yellow-400 mb-4"></i>
-                    <h3 class="font-bold">Power BI</h3>
+                    <h3 class="font-bold text-base">Power BI</h3>
                 </div>
                 <div class="reveal delay-200 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 hover:border-gray-500 transition duration-300">
                     <i class="fab fa-github text-4xl text-gray-500 mb-4"></i>
-                    <h3 class="font-bold">GitHub</h3>
+                    <h3 class="font-bold text-base">GitHub</h3>
                 </div>
                 <div class="reveal delay-300 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 hover:border-green-500 transition duration-300">
                     <i class="fas fa-file-excel text-4xl text-green-500 mb-4"></i>
-                    <h3 class="font-bold">Excel</h3>
+                    <h3 class="font-bold text-base">Excel</h3>
                 </div>
             </div>
         </section>
@@ -342,7 +342,7 @@
                 <div class="reveal mb-16 text-center">
                      <span class="text-purple-600 font-bold tracking-widest uppercase text-xs">Portfolio</span>
                      <h2 class="text-3xl md:text-4xl font-bold mt-2">Featured Projects</h2>
-                     <p class="text-gray-500 mt-2 max-w-xl mx-auto">Applying AI and Blockchain to solve real-world problems with elegant code.</p>
+                     <p class="text-base text-gray-500 mt-2 max-w-xl mx-auto font-light">Applying AI and Blockchain to solve real-world problems.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8">
@@ -355,9 +355,9 @@
                                 <span class="px-3 py-1 rounded-full border border-gray-200 dark:border-gray-700 text-xs font-bold uppercase text-gray-500">AI / ML</span>
                             </div>
                             <h3 class="text-2xl font-bold mb-3 group-hover:text-blue-600 transition">The Climate Crusader</h3>
-                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">An AI-powered weather and climate prediction platform utilizing historical data for accurate forecasting.</p>
+                            <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-6">An AI-powered weather and climate prediction platform utilizing historical data for accurate forecasting.</p>
                         </div>
-                        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
+                        <div class="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
                     </div>
 
                     <div class="reveal delay-100 group relative overflow-hidden rounded-[2rem] bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-xl hover:shadow-2xl transition duration-700 hover:-translate-y-2">
@@ -369,12 +369,12 @@
                                 <span class="px-3 py-1 rounded-full border border-gray-200 dark:border-gray-700 text-xs font-bold uppercase text-gray-500">JS / OpenAI</span>
                             </div>
                             <h3 class="text-2xl font-bold mb-3 group-hover:text-purple-600 transition">Voice AI Assistant</h3>
-                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">Real-time voice interaction with GPT-based responses. A hands-free virtual assistant experience.</p>
+                            <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-6">Real-time voice interaction with GPT-based responses. A hands-free virtual assistant experience.</p>
                             <a href="https://ragupathichinraj.github.io/nexus-virtual-assistant/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-bold text-purple-600 hover:tracking-wide transition-all">
                                 View Live Demo <i class="fas fa-arrow-right ml-2 text-xs"></i>
                             </a>
                         </div>
-                        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
+                        <div class="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-purple-400 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
                     </div>
 
                     <div class="reveal delay-200 group relative overflow-hidden rounded-[2rem] bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-xl hover:shadow-2xl transition duration-700 hover:-translate-y-2">
@@ -386,12 +386,12 @@
                                 <span class="px-3 py-1 rounded-full border border-gray-200 dark:border-gray-700 text-xs font-bold uppercase text-gray-500">Web App</span>
                             </div>
                             <h3 class="text-2xl font-bold mb-3 group-hover:text-yellow-600 transition">Travel Planner</h3>
-                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">Destination planning made easy. Integrates live weather info using OpenWeatherMap API to help you pack right.</p>
+                            <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-6">Destination planning made easy. Integrates live weather info using OpenWeatherMap API to help you pack right.</p>
                             <a href="https://ragupathichinraj.github.io/trip-planner/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-bold text-yellow-600 hover:tracking-wide transition-all">
                                 View Live Demo <i class="fas fa-arrow-right ml-2 text-xs"></i>
                             </a>
                         </div>
-                        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
+                        <div class="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-600 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
                     </div>
 
                     <div class="reveal delay-300 group relative overflow-hidden rounded-[2rem] bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-xl hover:shadow-2xl transition duration-700 hover:-translate-y-2">
@@ -403,42 +403,65 @@
                                 <span class="px-3 py-1 rounded-full border border-gray-200 dark:border-gray-700 text-xs font-bold uppercase text-gray-500">Blockchain</span>
                             </div>
                             <h3 class="text-2xl font-bold mb-3 group-hover:text-green-600 transition">Decentralized Voting</h3>
-                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">A secure and transparent voting platform ensuring immutability and trust using blockchain technology.</p>
+                            <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-6">A secure and transparent voting platform ensuring immutability and trust using blockchain technology.</p>
                         </div>
-                        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-green-600 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
+                        <div class="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-green-400 to-green-600 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="internships" class="bg-gray-900 text-white py-24 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-1/2 h-full bg-gray-800 opacity-20 transform skew-x-12"></div>
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gray-800 opacity-20 transform skew-x-12 pointer-events-none"></div>
 
             <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16">
                 
                 <div class="reveal">
                     <h2 class="text-3xl font-bold mb-10 flex items-center gap-4">
                         <span class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-sm"><i class="fas fa-briefcase"></i></span>
-                        Internships
+                        Experience Timeline
                     </h2>
-                    <div class="space-y-8 border-l border-gray-700 ml-5 pl-8">
-                        <div class="relative">
-                            <div class="absolute -left-[39px] w-5 h-5 bg-orange-500 rounded-full border-4 border-gray-900"></div>
+                    
+                    <div class="space-y-12 border-l border-gray-700 ml-5 pl-8">
+                        
+                        <div class="relative group">
+                            <div class="absolute -left-[39px] w-5 h-5 bg-orange-500 rounded-full border-4 border-gray-900 group-hover:scale-125 transition"></div>
                             <span class="text-xs text-orange-400 font-bold uppercase tracking-widest">Jan – Mar 2024</span>
-                            <h3 class="text-xl font-bold mt-1">AWS Academy</h3>
-                            <p class="text-gray-400">Cloud Virtual Internship</p>
+                            <h3 class="text-xl font-bold mt-1 group-hover:text-orange-400 transition">AWS Academy</h3>
+                            <p class="text-gray-400 text-sm mb-3">Cloud Foundations Internship</p>
+                            <a href="AWS_Internship.pdf" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold bg-gray-800 hover:bg-orange-500 hover:text-white border border-gray-700 px-3 py-1.5 rounded-full transition-colors">
+                                <i class="fas fa-file-pdf"></i> View Certificate
+                            </a>
                         </div>
-                        <div class="relative">
-                            <div class="absolute -left-[39px] w-5 h-5 bg-red-500 rounded-full border-4 border-gray-900"></div>
-                            <span class="text-xs text-red-400 font-bold uppercase tracking-widest">Apr – Jun 2024</span>
-                            <h3 class="text-xl font-bold mt-1">Google for Developers</h3>
-                            <p class="text-gray-400">AI/ML Virtual Internship</p>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[39px] w-5 h-5 bg-gray-400 rounded-full border-4 border-gray-900 group-hover:scale-125 transition"></div>
+                            <span class="text-xs text-gray-400 font-bold uppercase tracking-widest">Mar 2024</span>
+                            <h3 class="text-xl font-bold mt-1 group-hover:text-white transition">National iOS Workshop</h3>
+                            <p class="text-gray-400 text-sm mb-3">App Development Workshop</p>
+                            <a href="IOS_Workshop.pdf" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold bg-gray-800 hover:bg-gray-600 hover:text-white border border-gray-700 px-3 py-1.5 rounded-full transition-colors">
+                                <i class="fas fa-file-pdf"></i> View Certificate
+                            </a>
                         </div>
-                        <div class="relative">
-                            <div class="absolute -left-[39px] w-5 h-5 bg-blue-500 rounded-full border-4 border-gray-900"></div>
-                            <span class="text-xs text-blue-400 font-bold uppercase tracking-widest">Mar 2025</span>
-                            <h3 class="text-xl font-bold mt-1">IIT Madras Workshop</h3>
-                            <p class="text-gray-400">Data Science Workshop</p>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[39px] w-5 h-5 bg-blue-500 rounded-full border-4 border-gray-900 group-hover:scale-125 transition"></div>
+                            <span class="text-xs text-blue-400 font-bold uppercase tracking-widest">Apr – Jun 2024</span>
+                            <h3 class="text-xl font-bold mt-1 group-hover:text-blue-400 transition">Google for Developers</h3>
+                            <p class="text-gray-400 text-sm mb-3">AI/ML Virtual Internship</p>
+                            <a href="Google_AIML_Internship.pdf" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold bg-gray-800 hover:bg-blue-500 hover:text-white border border-gray-700 px-3 py-1.5 rounded-full transition-colors">
+                                <i class="fas fa-file-pdf"></i> View Certificate
+                            </a>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[39px] w-5 h-5 bg-red-500 rounded-full border-4 border-gray-900 group-hover:scale-125 transition"></div>
+                            <span class="text-xs text-red-400 font-bold uppercase tracking-widest">Mar 2025</span>
+                            <h3 class="text-xl font-bold mt-1 group-hover:text-red-400 transition">IIT Madras</h3>
+                            <p class="text-gray-400 text-sm mb-3">Data Science Workshop</p>
+                            <a href="IIT_Madras_Workshop.pdf" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold bg-gray-800 hover:bg-red-500 hover:text-white border border-gray-700 px-3 py-1.5 rounded-full transition-colors">
+                                <i class="fas fa-file-pdf"></i> View Certificate
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -446,38 +469,86 @@
                 <div class="reveal delay-200">
                     <h2 class="text-3xl font-bold mb-10 flex items-center gap-4">
                         <span class="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center text-sm"><i class="fas fa-certificate"></i></span>
-                        Certifications
+                        Professional Badges
                     </h2>
-                    <ul class="space-y-4">
-                        <li class="group flex justify-between items-center bg-gray-800/50 p-4 rounded-xl border border-gray-700 hover:bg-gray-800 transition">
-                            <div>
-                                <h4 class="font-semibold text-gray-200">AWS Academy Cloud</h4>
-                                <p class="text-xs text-gray-500">Jan–Mar 2024</p>
+                    
+                    <div class="grid gap-4">
+
+                        <a href="https://www.credly.com/badges/54e3eed9-cb49-49e2-b9d0-20b0c211b28b/public_url" target="_blank" class="group flex items-center bg-gray-800/40 p-4 rounded-xl border border-gray-700 hover:border-orange-500 hover:bg-gray-800 transition duration-300 relative overflow-hidden">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-orange-500 text-2xl group-hover:scale-110 transition">
+                                <i class="fab fa-aws"></i>
                             </div>
-                            <a href="AWS_Internship.pdf" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
-                        </li>
-                        <li class="group flex justify-between items-center bg-gray-800/50 p-4 rounded-xl border border-gray-700 hover:bg-gray-800 transition">
-                            <div>
-                                <h4 class="font-semibold text-gray-200">National iOS Workshop</h4>
-                                <p class="text-xs text-gray-500">March 2024</p>
+                            <div class="ml-4 flex-1">
+                                <div class="text-xs text-orange-400 font-bold uppercase tracking-wider mb-0.5">Feb 2024</div>
+                                <h4 class="font-bold text-gray-100 group-hover:text-orange-400 transition">AWS Cloud Foundations</h4>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <span class="text-xs bg-gray-700 px-2 py-0.5 rounded text-gray-300">AWS Academy</span>
+                                    <span class="text-xs text-green-400 flex items-center gap-1"><i class="fas fa-check-circle"></i> Verified</span>
+                                </div>
                             </div>
-                            <a href="IOS_App_Workshop.pdf" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
-                        </li>
-                        <li class="group flex justify-between items-center bg-gray-800/50 p-4 rounded-xl border border-gray-700 hover:bg-gray-800 transition">
-                            <div>
-                                <h4 class="font-semibold text-gray-200">Google AI-ML Internship</h4>
-                                <p class="text-xs text-gray-500">Apr–Jun 2024</p>
+                            <div class="text-gray-500 group-hover:text-white transition"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+                        
+                        <a href="https://www.credly.com/badges/b2f80a4e-c7bd-4c01-9344-77838e198b4b/public_url" target="_blank" class="group flex items-center bg-gray-800/40 p-4 rounded-xl border border-gray-700 hover:border-orange-500 hover:bg-gray-800 transition duration-300 relative overflow-hidden">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-orange-500 text-2xl group-hover:scale-110 transition">
+                                <i class="fab fa-aws"></i>
                             </div>
-                            <a href="Google_ML_Internship.pdf" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
-                        </li>
-                        <li class="group flex justify-between items-center bg-gray-800/50 p-4 rounded-xl border border-gray-700 hover:bg-gray-800 transition">
-                            <div>
-                                <h4 class="font-semibold text-gray-200">Google Data Analytics</h4>
-                                <p class="text-xs text-gray-500">May 2025</p>
+                            <div class="ml-4 flex-1">
+                                <div class="text-xs text-orange-400 font-bold uppercase tracking-wider mb-0.5">Feb 2024</div>
+                                <h4 class="font-bold text-gray-100 group-hover:text-orange-400 transition">AWS Cloud Architecting</h4>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <span class="text-xs bg-gray-700 px-2 py-0.5 rounded text-gray-300">AWS Academy</span>
+                                    <span class="text-xs text-green-400 flex items-center gap-1"><i class="fas fa-check-circle"></i> Verified</span>
+                                </div>
                             </div>
-                            <a href="Google_Data_Analytics.pdf" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fas fa-arrow-right text-xs"></i></a>
-                        </li>
-                    </ul>
+                            <div class="text-gray-500 group-hover:text-white transition"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+
+                        <a href="https://www.credly.com/badges/cf5621d7-c76d-4832-b38c-5e040cd62ebd/public_url" target="_blank" class="group flex items-center bg-gray-800/40 p-4 rounded-xl border border-gray-700 hover:border-blue-500 hover:bg-gray-800 transition duration-300 relative overflow-hidden">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-blue-500 text-2xl group-hover:scale-110 transition">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <div class="text-xs text-blue-400 font-bold uppercase tracking-wider mb-0.5">Oct 2024</div>
+                                <h4 class="font-bold text-gray-100 group-hover:text-blue-400 transition">Google Cloud Cybersecurity</h4>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <span class="text-xs bg-gray-700 px-2 py-0.5 rounded text-gray-300">Google Cloud</span>
+                                    <span class="text-xs text-green-400 flex items-center gap-1"><i class="fas fa-check-circle"></i> Verified</span>
+                                </div>
+                            </div>
+                            <div class="text-gray-500 group-hover:text-white transition"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+
+                        <a href="https://www.credly.com/badges/b425fe54-35c2-42d6-b3c1-4bef2b0fed00/public_url" target="_blank" class="group flex items-center bg-gray-800/40 p-4 rounded-xl border border-gray-700 hover:border-yellow-500 hover:bg-gray-800 transition duration-300 relative overflow-hidden">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-yellow-500 text-2xl group-hover:scale-110 transition">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <div class="text-xs text-yellow-400 font-bold uppercase tracking-wider mb-0.5">Oct 2025</div>
+                                <h4 class="font-bold text-gray-100 group-hover:text-yellow-400 transition">Google Cloud Data Analytics</h4>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <span class="text-xs bg-gray-700 px-2 py-0.5 rounded text-gray-300">Google Cloud</span>
+                                    <span class="text-xs text-green-400 flex items-center gap-1"><i class="fas fa-check-circle"></i> Verified</span>
+                                </div>
+                            </div>
+                            <div class="text-gray-500 group-hover:text-white transition"><i class="fas fa-external-link-alt"></i></div>
+                        </a>
+
+                        <a href="Google_Data_Analytics_Pro.pdf" target="_blank" class="group flex items-center bg-gray-800/40 p-4 rounded-xl border border-gray-700 hover:border-green-500 hover:bg-gray-800 transition duration-300 relative overflow-hidden">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-green-500 text-2xl group-hover:scale-110 transition">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <div class="text-xs text-green-400 font-bold uppercase tracking-wider mb-0.5">May 2025</div>
+                                <h4 class="font-bold text-gray-100 group-hover:text-green-400 transition">Data Analytics Professional</h4>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <span class="text-xs bg-gray-700 px-2 py-0.5 rounded text-gray-300">Coursera</span>
+                                </div>
+                            </div>
+                            <div class="text-gray-500 group-hover:text-white transition"><i class="fas fa-download"></i></div>
+                        </a>
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -485,20 +556,20 @@
         <section id="languages" class="max-w-7xl mx-auto px-6 py-24 border-t border-gray-200 dark:border-gray-800">
             <div class="reveal text-center">
                 <span class="text-blue-600 font-bold tracking-widest uppercase text-xs">Communication</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-10">Languages</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-12">Languages</h2>
 
                 <div class="flex flex-wrap justify-center gap-8 text-lg font-medium">
                     <span class="flex items-center gap-2">
-                        <div class="w-2 h-2 bg-green-500 rounded-full"></div> Telugu (Native)
+                        <div class="w-2.5 h-2.5 bg-green-500 rounded-full"></div> Telugu (Native)
                     </span>
                     <span class="flex items-center gap-2">
-                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div> English (Fluent)
+                        <div class="w-2.5 h-2.5 bg-blue-500 rounded-full"></div> English (Fluent)
                     </span>
                     <span class="flex items-center gap-2">
-                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div> Tamil (Fluent)
+                        <div class="w-2.5 h-2.5 bg-blue-500 rounded-full"></div> Tamil (Fluent)
                     </span>
                     <span class="flex items-center gap-2">
-                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div> Kannada (Fluent)
+                        <div class="w-2.5 h-2.5 bg-blue-500 rounded-full"></div> Kannada (Fluent)
                     </span>
                 </div>
             </div>
@@ -506,23 +577,23 @@
 
         <section id="contact" class="bg-gray-50 dark:bg-black py-24 border-t border-gray-200 dark:border-gray-800">
             <div class="max-w-4xl mx-auto px-6 text-center reveal">
-                <h2 class="text-4xl md:text-5xl font-black mb-6">Let's Build the Future.</h2>
-                <p class="text-gray-500 mb-12 text-lg">Currently available for Data Analyst and AI Engineering roles.</p>
+                <h2 class="text-4xl md:text-6xl font-black mb-6">Let's Build the Future.</h2>
+                <p class="text-gray-500 mb-12 text-lg font-light">Currently available for Data Analyst and AI Engineering roles.</p>
                 
                 <div class="flex flex-col md:flex-row justify-center gap-6 mb-16">
                     <a href="mailto:ragupathic2005@gmail.com" class="group bg-white dark:bg-gray-900 p-8 rounded-3xl flex-1 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition duration-300 border border-gray-100 dark:border-gray-800">
-                        <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 group-hover:scale-110 transition">
-                            <i class="fas fa-envelope"></i>
+                        <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 group-hover:scale-110 transition">
+                            <i class="fas fa-envelope text-xl"></i>
                         </div>
-                        <p class="text-xs font-bold uppercase text-gray-400 mb-1">Email Me</p>
+                        <p class="text-xs font-bold uppercase text-gray-400 mb-1 tracking-wider">Email Me</p>
                         <p class="text-lg font-bold">ragupathic2005@gmail.com</p>
                     </a>
                     
                     <a href="tel:+918610750690" class="group bg-white dark:bg-gray-900 p-8 rounded-3xl flex-1 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition duration-300 border border-gray-100 dark:border-gray-800">
-                        <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4 text-green-600 group-hover:scale-110 transition">
-                            <i class="fas fa-phone"></i>
+                        <div class="w-14 h-14 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4 text-green-600 group-hover:scale-110 transition">
+                            <i class="fas fa-phone text-xl"></i>
                         </div>
-                        <p class="text-xs font-bold uppercase text-gray-400 mb-1">Call Me</p>
+                        <p class="text-xs font-bold uppercase text-gray-400 mb-1 tracking-wider">Call Me</p>
                         <p class="text-lg font-bold">+91 8610750690</p>
                     </a>
                 </div>
@@ -532,53 +603,52 @@
                     <a href="https://github.com/ragupathichinraj" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition transform hover:scale-110" aria-label="GitHub"><i class="fab fa-github text-4xl"></i></a>
                 </div>
                 
-                <p class="text-gray-400 text-sm mt-16"> © 2025 Ragupathi C. All rights reserved.</p>
+                <p class="text-gray-400 text-sm mt-16"> 
+                    © <span id="year"></span> Ragupathi C. All rights reserved.
+                </p>
 
             </div>
         </section>
 
+        <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+            class="fixed bottom-8 right-8 bg-blue-600 text-white p-4 rounded-full shadow-lg translate-y-24 opacity-0 transition-all duration-500 z-40 hover:bg-blue-700">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
     </main>
 
     <script>
-        // 1. Mobile Menu Logic with Scroll Lock
+        // 1. Mobile Menu Logic
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        // Toggle Menu
         menuBtn.addEventListener('click', () => {
             const isHidden = mobileMenu.classList.contains('hidden');
             if (isHidden) {
-                // Show Menu
                 mobileMenu.classList.remove('hidden');
                 mobileMenu.classList.add('flex');
                 document.body.classList.add('overflow-hidden');
                 setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10);
                 menuBtn.innerHTML = '<i class="fas fa-times text-2xl"></i>';
             } else {
-                // Hide Menu
-                mobileMenu.classList.add('opacity-0');
-                document.body.classList.remove('overflow-hidden');
-                setTimeout(() => {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('flex');
-                }, 300);
-                menuBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+                closeMenu();
             }
         });
 
-        // Close menu when a link is clicked
         mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('opacity-0');
-                document.body.classList.remove('overflow-hidden');
-                setTimeout(() => {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('flex');
-                }, 300);
-                menuBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
-            });
+            link.addEventListener('click', closeMenu);
         });
+
+        function closeMenu() {
+            mobileMenu.classList.add('opacity-0');
+            document.body.classList.remove('overflow-hidden');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            }, 300);
+            menuBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+        }
 
         // 2. Dark Mode Logic
         function toggleDarkMode() {
@@ -587,30 +657,36 @@
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
         }
 
-        // Apply Theme on Load
         if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
         } else {
             document.documentElement.classList.remove('dark');
         }
 
-        // 3. Scroll Reveal Animation (Refined)
+        // 3. Scroll Reveal Animation
         document.addEventListener("DOMContentLoaded", () => {
             const reveals = document.querySelectorAll('.reveal');
-
             const revealObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
                     }
                 });
-            }, {
-                root: null,
-                threshold: 0.1, 
-                rootMargin: "0px 0px -80px 0px"
-            });
-
+            }, { root: null, threshold: 0.1, rootMargin: "0px 0px -80px 0px" });
             reveals.forEach(el => revealObserver.observe(el));
+            
+            // Auto Update Year
+            document.getElementById("year").textContent = new Date().getFullYear();
+        });
+
+        // 4. Back to Top Button Logic
+        const backToTopBtn = document.getElementById("backToTop");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove("translate-y-24", "opacity-0");
+            } else {
+                backToTopBtn.classList.add("translate-y-24", "opacity-0");
+            }
         });
     </script>
 </body>
