@@ -21,7 +21,7 @@
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -81,6 +81,60 @@
         .dark .glass-nav {
             background: rgba(10, 10, 10, 0.85);
             border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* Animated Background Grid */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+        }
+        .dark .bg-grid {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        }
+
+        /* Typing Cursor */
+        .cursor {
+            display: inline-block;
+            width: 4px;
+            background-color: #2563eb; /* Blue-600 */
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Floating Animation for Image */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Button Shine Effect */
+        .btn-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-shine::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        .btn-shine:hover::after {
+            left: 100%;
         }
 
         /* Custom Scrollbar */
@@ -148,49 +202,78 @@
     </nav>
 
     <main>
-        <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden pt-16">
-            <div class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-                <div class="absolute top-1/4 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-blue-400/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob dark:bg-blue-600/10"></div>
-                <div class="absolute top-1/3 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-purple-400/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000 dark:bg-purple-600/10"></div>
-                <div class="absolute bottom-1/4 left-1/3 w-72 h-72 md:w-96 md:h-96 bg-pink-400/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000 dark:bg-pink-600/10"></div>
+        <section class="min-h-screen flex items-center justify-center px-6 md:px-12 relative overflow-hidden pt-20">
+    
+            <div class="absolute inset-0 w-full h-full bg-grid pointer-events-none z-0"></div>
+            <div class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0">
+                <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] animate-pulse"></div>
+                <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px] animate-pulse delay-1000"></div>
             </div>
-
-            <div class="z-10 reveal active max-w-5xl mx-auto">
-                <div class="mb-8 relative inline-block group">
-                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-40 group-hover:opacity-60 transition duration-500"></div>
-                    <img 
-                        src="images.jpg" 
-                        alt="Ragupathi C" 
-                        class="relative w-36 h-36 md:w-48 md:h-48 rounded-full border-4 border-white dark:border-gray-800 shadow-2xl object-cover mx-auto transition transform group-hover:scale-105 duration-500"
-                    >
+        
+            <div class="max-w-7xl mx-auto w-full z-10 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+                
+                <div class="order-2 md:order-1 flex flex-col items-start text-left reveal active">
+                    
+                    <span class="text-blue-600 dark:text-blue-400 font-bold tracking-widest uppercase text-sm mb-4 animate-fade-up">
+                        Hello, I am
+                    </span>
+                    
+                    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none mb-6 text-gray-900 dark:text-white min-h-[1.5em] md:min-h-[2em]">
+                        <span id="typewriter"></span><span class="cursor text-5xl md:text-7xl lg:text-8xl">&nbsp;</span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-lg font-light leading-relaxed mb-6">
+                        I analyze, visualize, and interpret data to help businesses make <span class="font-semibold text-gray-900 dark:text-white">better decisions.</span>
+                    </p>
+                    
+                    <div class="flex items-center gap-3 mb-8 animate-fade-up">
+                        <div class="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/20 flex items-center justify-center">
+                            <i class="fas fa-map-marker-alt text-red-500 text-lg animate-bounce"></i>
+                        </div>
+                        <span class="text-gray-700 dark:text-gray-300 font-medium text-lg tracking-wide">
+                            Veppanapalli, Krishnagiri
+                        </span>
+                    </div>
+                    <div class="flex flex-wrap gap-4 w-full">
+                        <a href="#projects" class="btn-shine px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full text-base font-bold hover:shadow-lg hover:shadow-blue-500/40 hover:-translate-y-1 transition-all duration-300">
+                            View My Work
+                        </a>
+                        <a href="https://www.linkedin.com/in/ragupathi-c-033056288/" target="_blank" rel="noopener noreferrer" class="px-8 py-4 border border-gray-300 dark:border-gray-700 rounded-full text-base font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                            <i class="fab fa-linkedin"></i> Get In Touch
+                        </a>
+                    </div>
                 </div>
 
-                <p class="text-honorBlue font-bold tracking-[0.2em] uppercase mb-4 text-sm md:text-base animate-fade-up">RAGUPATHI C</p> 
-                
-                <h1 class="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter leading-tight md:leading-[0.95] mb-6 text-gray-900 dark:text-white">
-                    Data Analyst.<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Business Insights.</span>
-                </h1>
-                
-                <p class="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed mb-10 px-4">
-                    I analyze, visualize, and interpret data to help businesses make better decisions.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center px-4 w-full sm:w-auto">
-                    <a href="#projects" class="w-full sm:w-auto px-8 py-3 bg-blue-600 text-white rounded-full text-base font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transform hover:-translate-y-1">
-                        View My Work
-                    </a>
-                    <a href="https://www.linkedin.com/in/ragupathi-c-033056288/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-3 border border-gray-300 dark:border-gray-700 rounded-full text-base font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition transform hover:-translate-y-1">
-                        LinkedIn Profile
-                    </a>
-                </div>
-            </div>
+                <div class="order-1 md:order-2 flex flex-col items-center justify-center relative reveal active delay-200">
+                    
+                    <div class="relative group animate-float">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full blur-2xl opacity-40 group-hover:opacity-60 transition duration-500"></div>
+                        
+                        <div class="relative w-72 h-72 md:w-96 md:h-96 lg:w-[30rem] lg:h-[30rem] rounded-full p-[8px] bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 shadow-2xl transition transform group-hover:scale-105 duration-500">
+                            <img 
+                                src="images.jpg" 
+                                alt="Ragupathi C" 
+                                class="w-full h-full rounded-full object-cover"
+                            >
+                        </div>
+                        </div>
 
-            <div class="absolute bottom-10 animate-bounce text-gray-400">
+                    <div class="mt-8 text-center animate-fade-up">
+    <h2 class="text-3xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight">RAGUPATHI C</h2>
+    
+    <p class="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent uppercase tracking-[0.2em] text-sm font-bold mt-2">
+        Data Analyst
+    </p>
+</div>
+
+                </div>
+
+            </div>
+        
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-gray-400 dark:text-gray-600 hidden md:block">
                 <i class="fas fa-chevron-down text-xl"></i>
             </div>
         </section>
-
         <section id="about" class="max-w-6xl mx-auto px-6 py-20 md:py-24 border-t border-gray-200 dark:border-gray-800">
             <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
                 <div class="reveal">
@@ -340,9 +423,9 @@
         <section id="projects" class="bg-gray-50 dark:bg-black py-20 md:py-24 transition-colors duration-500">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="reveal mb-12 md:mb-16 text-center">
-                     <span class="text-purple-600 font-bold tracking-widest uppercase text-xs">Portfolio</span>
-                     <h2 class="text-3xl md:text-4xl font-bold mt-2">Featured Projects</h2>
-                     <p class="text-base text-gray-500 mt-2 max-w-xl mx-auto font-light">Applying AI and Blockchain to solve real-world problems.</p>
+                      <span class="text-purple-600 font-bold tracking-widest uppercase text-xs">Portfolio</span>
+                      <h2 class="text-3xl md:text-4xl font-bold mt-2">Featured Projects</h2>
+                      <p class="text-base text-gray-500 mt-2 max-w-xl mx-auto font-light">Applying AI and Blockchain to solve real-world problems.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8">
@@ -708,6 +791,45 @@
                 backToTopBtn.classList.add("translate-y-24", "opacity-0");
             }
         });
+
+        // 5. Typing Animation Logic
+        const textElement = document.getElementById("typewriter");
+        const phrases = ["Data Analyst.", "Business Insights.", "Problem Solver."];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50; // Deleting speed
+            } else {
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100; // Typing speed
+            }
+
+            // Add gradient class to the text
+            textElement.className = "text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600";
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pause at end of phrase
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500; // Pause before new phrase
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        // Start the typing animation
+        document.addEventListener('DOMContentLoaded', type);
     </script>
 </body>
 </html>
